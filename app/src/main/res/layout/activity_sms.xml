@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_send_message"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:weightSum="4.20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".80"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="SMS"
+                android:textColor="@android:color/background_light"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.40">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:orientation="vertical"
+                    android:weightSum="8">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/NameEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/ractangle_dark_border"
+                            android:hint="Person Name"
+                            android:inputType="textPersonName"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/CompanyEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/ractangle_dark_border"
+                            android:hint="Company"
+                            android:textAlignment="center" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/PlaceEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/ractangle_dark_border"
+                            android:hint="Place"
+                            android:inputType="textEmailAddress"
+                            android:textAlignment="center" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <CalendarView
+                            android:id="@+id/calenderView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="15dp"
+                            android:background="#FFFFFF"></CalendarView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF">
+
+                            <Spinner
+                                android:id="@+id/hourSpinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#FFFFFF"
+                                android:dropDownWidth="match_parent"
+                                android:gravity="center"
+                                android:textSize="40sp"></Spinner>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF">
+
+                            <Spinner
+                                android:id="@+id/MinuteSpinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:background="#FFFFFF"
+                                android:dropDownWidth="match_parent"
+                                android:gravity="center"
+                                tools:listitem="hello"></Spinner>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF">
+
+                            <Spinner
+                                android:id="@+id/AmPmSpinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:background="#FFFFFF"
+                                android:dropDownWidth="match_parent"
+                                android:gravity="center"
+                                tools:listitem="hello"></Spinner>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Spinner
+                            android:id="@+id/ActionSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_marginTop="15dp"
+                            android:background="#FFFFFF"
+                            android:dropDownWidth="match_parent"
+                            android:gravity="center"></Spinner>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/OtherActionEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:hint="type your Action"
+                            android:background="@drawable/ractangle_dark_border"
+                            android:visibility="invisible"
+                            android:textAlignment="center" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/sendButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/send_button"
+                            android:text="Send SMS"
+                            android:textSize="24sp"></Button>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
