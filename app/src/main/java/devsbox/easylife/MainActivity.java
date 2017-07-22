@@ -53,7 +53,13 @@ public class MainActivity extends AppCompatActivity {
         mail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(MainActivity.this , CallActivity.class);
+
+                ////////////SharedPreferences///////////////
+                psivalue = psivalue+1;
+                editor.putInt("psi", psivalue);
+                editor.commit(); // commit it when you are done.
+
+                Intent in = new Intent(MainActivity.this , MailActivity.class);
                 startActivity(in);
             }
         });

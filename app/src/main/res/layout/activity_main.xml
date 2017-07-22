@@ -16,14 +16,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight=".80"
+            android:layout_weight=".60"
             android:background="@drawable/top"
             android:orientation="horizontal"></LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="3.20">
+            android:layout_weight="3.40">
 
 
             <ScrollView
@@ -269,56 +269,6 @@
             </ScrollView>
         </LinearLayout>
 
-        <!--   <LinearLayout
-               android:layout_width="match_parent"
-               android:layout_height="0dp"
-               android:layout_weight=".80"
-               android:background="@drawable/bottombutton"
-               android:orientation="horizontal"
-               android:weightSum="">
-
-               <LinearLayout
-                   android:layout_width="0dp"
-                   android:layout_height="match_parent"
-                   android:layout_weight=".80"
-                   android:orientation="vertical"
-                   android:weightSum="2">
-
-                   <LinearLayout
-                       android:layout_width="match_parent"
-                       android:layout_height="0dp"
-                       android:layout_weight="1"
-                       android:background="@drawable/pr">
-
-
-                   </LinearLayout>
-
-                   <LinearLayout
-                       android:layout_width="match_parent"
-                       android:layout_height="0dp"
-                       android:layout_weight="1">
-
-                       <TextClock
-                           android:id="@+id/textClock"
-                           android:layout_width="match_parent"
-                           android:layout_height="match_parent"
-                           android:gravity="center"
-                           android:textAlignment="center"
-                           android:textSize="20sp" />
-
-                   </LinearLayout>
-
-
-               </LinearLayout>
-
-               <LinearLayout
-                   android:layout_width="0dp"
-                   android:layout_height="match_parent"
-                   android:layout_weight="2.20"
-                   android:background="@drawable/bottombutton"
-                   android:orientation="vertical"></LinearLayout>
-
-        </LinearLayout>-->
     </LinearLayout>
 
 

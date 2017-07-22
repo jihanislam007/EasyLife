@@ -12,19 +12,19 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:orientation="vertical"
-        android:weightSum="4.20">
+        android:weightSum="4">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight=".80"
+            android:layout_weight=".60"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="SMS"
+                android:text="Mail"
                 android:textColor="@android:color/background_light"
                 android:textSize="50sp"
                 android:textStyle="bold" />
@@ -126,14 +126,14 @@
 
                         <LinearLayout
                             android:layout_width="0dp"
-                            android:layout_height="70dp"
+                            android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:background="#FFFFFF">
 
                             <Spinner
                                 android:id="@+id/hourSpinner"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="70dp"
                                 android:background="#FFFFFF"
                                 android:dropDownWidth="match_parent"
                                 android:gravity="center"
@@ -153,8 +153,7 @@
                                 android:layout_height="70dp"
                                 android:background="#FFFFFF"
                                 android:dropDownWidth="match_parent"
-                                android:gravity="center"
-                                tools:listitem="hello"></Spinner>
+                                android:gravity="center"></Spinner>
 
                         </LinearLayout>
 
@@ -170,8 +169,7 @@
                                 android:layout_height="70dp"
                                 android:background="#FFFFFF"
                                 android:dropDownWidth="match_parent"
-                                android:gravity="center"
-                                tools:listitem="hello"></Spinner>
+                                android:gravity="center"></Spinner>
 
                         </LinearLayout>
 
@@ -224,7 +222,7 @@
                             android:layout_marginRight="15dp"
                             android:layout_marginTop="15dp"
                             android:background="@drawable/send_button"
-                            android:text="Send SMS"
+                            android:text="Send Mail"
                             android:textSize="24sp"></Button>
 
                     </LinearLayout>

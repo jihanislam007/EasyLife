@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class CallActivity extends AppCompatActivity {
+public class MailActivity extends AppCompatActivity {
 
     EditText sub, company, place, action_edittext;
     CalendarView calender;
@@ -48,7 +48,7 @@ public class CallActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_call);
+        setContentView(R.layout.activity_mail);
 
         sub = (EditText) findViewById(R.id.NameEditText);
         company = (EditText) findViewById(R.id.CompanyEditText);
@@ -66,6 +66,7 @@ public class CallActivity extends AppCompatActivity {
 
 
         //////////////for spinner data/////////////////////////////
+        hour_list.add("Hour");
         hour_list.add("1");
         hour_list.add("2");
         hour_list.add("3");
@@ -79,6 +80,7 @@ public class CallActivity extends AppCompatActivity {
         hour_list.add("11");
         hour_list.add("12");
 
+        minute_list.add("Minute");
         minute_list.add("00");
         minute_list.add("10");
         minute_list.add("20");
@@ -89,6 +91,7 @@ public class CallActivity extends AppCompatActivity {
         am_list.add("AM");
         am_list.add("PM");
 
+        action_list.add("Action");
         action_list.add("Master Proposal");
         action_list.add("Media question");
         action_list.add("Event QT");
@@ -111,41 +114,45 @@ public class CallActivity extends AppCompatActivity {
 
                 switch (position) {
                     case 0:
-                        hour_data = 1;
+                        //  hour_data = 0;
                         break;
 
                     case 1:
-                        hour_data = 2;
+                        hour_data = 1;
                         break;
 
                     case 2:
-                        hour_data = 3;
+                        hour_data = 2;
                         break;
                     case 3:
-                        hour_data = 4;
+                        hour_data = 3;
                         break;
                     case 4:
-                        hour_data = 5;
+                        hour_data = 4;
                         break;
                     case 5:
-                        hour_data = 6;
+                        hour_data = 5;
                         break;
                     case 6:
-                        hour_data = 7;
+                        hour_data = 6;
                         break;
                     case 7:
-                        hour_data = 8;
+                        hour_data = 7;
                         break;
                     case 8:
-                        hour_data = 9;
+                        hour_data = 8;
                         break;
                     case 9:
-                        hour_data = 10;
+                        hour_data = 9;
                         break;
                     case 10:
-                        hour_data = 11;
+                        hour_data = 10;
                         break;
                     case 11:
+                        hour_data = 11;
+                        break;
+
+                    case 12:
                         hour_data = 12;
                         break;
 
@@ -157,7 +164,7 @@ public class CallActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parentView) {
-                Toast.makeText(CallActivity.this, "You did not select Hour", Toast.LENGTH_LONG).show();
+                Toast.makeText(MailActivity.this, "You did not select Hour", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -176,23 +183,26 @@ public class CallActivity extends AppCompatActivity {
 
                 switch (position) {
                     case 0:
-                        minute_data = 00;
+                        //  minute_data = 00;
                         break;
 
                     case 1:
-                        minute_data = 10;
+                        minute_data = 00;
                         break;
 
                     case 2:
-                        minute_data = 20;
+                        minute_data = 10;
                         break;
                     case 3:
-                        minute_data = 30;
+                        minute_data = 20;
                         break;
                     case 4:
-                        minute_data = 40;
+                        minute_data = 30;
                         break;
                     case 5:
+                        minute_data = 40;
+                        break;
+                    case 6:
                         minute_data = 50;
                         break;
 
@@ -205,7 +215,7 @@ public class CallActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parentView) {
-                Toast.makeText(CallActivity.this, "You did not select Minute", Toast.LENGTH_LONG).show();
+                Toast.makeText(MailActivity.this, "You did not select Minute", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -238,7 +248,7 @@ public class CallActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parentView) {
-                Toast.makeText(CallActivity.this, "You did not select AM / PM", Toast.LENGTH_LONG).show();
+                Toast.makeText(MailActivity.this, "You did not select AM / PM", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -256,25 +266,29 @@ public class CallActivity extends AppCompatActivity {
 
                 switch (position) {
                     case 0:
-                        action_data = "Master Proposal";
+                        //
                         break;
                     case 1:
-                        action_data = "Media question";
+                        action_data = "Master Proposal";
                         break;
                     case 2:
-                        action_data = "Event QT";
+                        action_data = "Media question";
                         break;
                     case 3:
-                        action_data = "PR Offer";
+                        action_data = "Event QT";
                         break;
                     case 4:
-                        action_data = "Power Point Send";
+                        action_data = "PR Offer";
                         break;
                     case 5:
-                        action_data = "Radio Offer";
+                        action_data = "Power Point Send";
                         break;
                     case 6:
+                        action_data = "Radio Offer";
+                        break;
+                    case 7:
                         action_edittext.setVisibility(View.VISIBLE);
+                        action_data = "";
                         break;
 
                     default:
@@ -285,7 +299,7 @@ public class CallActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parentView) {
-                Toast.makeText(CallActivity.this, "You did not select Action", Toast.LENGTH_LONG).show();
+                Toast.makeText(MailActivity.this, "You did not select Action", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -317,34 +331,39 @@ public class CallActivity extends AppCompatActivity {
 
                 String actiondata = action_edittext.getText().toString();
 
-                shared = getSharedPreferences("A", Context.MODE_PRIVATE);   // get the sharedpreference set named "A"
-                float psi = shared.getInt("psi", 0);  // get value from key but return 0 if nothing is set
+                if (subdata.equals("") || companydata.equals("") || placedata.equals("")) {
+                    Toast.makeText(getApplicationContext()," Please file up your data",Toast.LENGTH_LONG).show();
+                } else {
 
-                Log.i("Send email", "");
-                String[] TO = {"Info.rapidpr@gmail.com , ostitto.papa@gmail.com , sishakhor@gmail.com"};
-                String[] CC = {""};
-                Intent emailIntent = new Intent(Intent.ACTION_SEND);
+                    shared = getSharedPreferences("A", Context.MODE_PRIVATE);   // get the sharedpreference set named "A"
+                    float psi = shared.getInt("psi", 0);  // get value from key but return 0 if nothing is set
 
-                emailIntent.setData(Uri.parse("mailto:"));
-                emailIntent.setType("text/plain");
-                emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
-                emailIntent.putExtra(Intent.EXTRA_CC, CC);
-                emailIntent.putExtra(Intent.EXTRA_SUBJECT, subdata+" এর সাথে মিটিং ");
-                emailIntent.putExtra(Intent.EXTRA_TEXT, (
-                        "RSN :"+psi+"\n\n"+
-                                "Company :"+companydata+"\n\n"+
-                                "Place :"+placedata+"\n\n"+
-                                "Meeting Date :" + dayy + "-" + monthh + "-" + yearr+"\n\n"+
-                                "Meeting Time :" + hour_data +"-"+minute_data+"-"+am_data+"\n\n"+
-                                "Action :"+action_data+ " " +actiondata+"\n\n"+
-                                "Sending Date :"+date));
+                    Log.i("Send email", "");
+                    String[] TO = {"Info.rapidpr@gmail.com , ostitto.papa@gmail.com , sishakhor@gmail.com , easylife.rapidpr@gmail.com"};
+                    String[] CC = {""};
+                    Intent emailIntent = new Intent(Intent.ACTION_SEND);
 
-                try {
-                    startActivity(Intent.createChooser(emailIntent, "Send mail..."));
-                    //    finish();
-                    Log.i("sending Finished ...", "");
-                } catch (android.content.ActivityNotFoundException ex) {
-                    Toast.makeText(CallActivity.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
+                    emailIntent.setData(Uri.parse("mailto:"));
+                    emailIntent.setType("text/plain");
+                    emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
+                    emailIntent.putExtra(Intent.EXTRA_CC, CC);
+                    emailIntent.putExtra(Intent.EXTRA_SUBJECT, subdata + " এর সাথে মিটিং ");
+                    emailIntent.putExtra(Intent.EXTRA_TEXT, (
+                            "RMN :" + psi + "\n\n" +
+                                    "Company :" + companydata + "\n\n" +
+                                    "Place :" + placedata + "\n\n" +
+                                    "Meeting Date :" + dayy + "-" + monthh + "-" + yearr + "\n\n" +
+                                    "Meeting Time :" + hour_data + "-" + minute_data + " " + am_data + "\n\n" +
+                                    "Action :" + action_data + " " + actiondata + "\n\n" +
+                                    "Sending Date :" + date));
+
+                    try {
+                        startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+                        //    finish();
+                        Log.i("sending Finished ...", "");
+                    } catch (android.content.ActivityNotFoundException ex) {
+                        Toast.makeText(MailActivity.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });

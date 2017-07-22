@@ -63,6 +63,7 @@ public class SmsActivity extends AppCompatActivity {
 
 
         //////////////for spinner data/////////////////////////////
+        hour_list.add("Hour");
         hour_list.add("1");
         hour_list.add("2");
         hour_list.add("3");
@@ -76,6 +77,7 @@ public class SmsActivity extends AppCompatActivity {
         hour_list.add("11");
         hour_list.add("12");
 
+        minute_list.add("Minute");
         minute_list.add("00");
         minute_list.add("10");
         minute_list.add("20");
@@ -86,6 +88,7 @@ public class SmsActivity extends AppCompatActivity {
         am_list.add("AM");
         am_list.add("PM");
 
+        action_list.add("Action");
         action_list.add("Master Proposal");
         action_list.add("Media question");
         action_list.add("Event QT");
@@ -108,41 +111,45 @@ public class SmsActivity extends AppCompatActivity {
 
                 switch (position) {
                     case 0:
-                        hour_data = 1;
+                        //  hour_data = 0;
                         break;
 
                     case 1:
-                        hour_data = 2;
+                        hour_data = 1;
                         break;
 
                     case 2:
-                        hour_data = 3;
+                        hour_data = 2;
                         break;
                     case 3:
-                        hour_data = 4;
+                        hour_data = 3;
                         break;
                     case 4:
-                        hour_data = 5;
+                        hour_data = 4;
                         break;
                     case 5:
-                        hour_data = 6;
+                        hour_data = 5;
                         break;
                     case 6:
-                        hour_data = 7;
+                        hour_data = 6;
                         break;
                     case 7:
-                        hour_data = 8;
+                        hour_data = 7;
                         break;
                     case 8:
-                        hour_data = 9;
+                        hour_data = 8;
                         break;
                     case 9:
-                        hour_data = 10;
+                        hour_data = 9;
                         break;
                     case 10:
-                        hour_data = 11;
+                        hour_data = 10;
                         break;
                     case 11:
+                        hour_data = 11;
+                        break;
+
+                    case 12:
                         hour_data = 12;
                         break;
 
@@ -173,23 +180,26 @@ public class SmsActivity extends AppCompatActivity {
 
                 switch (position) {
                     case 0:
-                        minute_data = 00;
+                        //  minute_data = 00;
                         break;
 
                     case 1:
-                        minute_data = 10;
+                        minute_data = 00;
                         break;
 
                     case 2:
-                        minute_data = 20;
+                        minute_data = 10;
                         break;
                     case 3:
-                        minute_data = 30;
+                        minute_data = 20;
                         break;
                     case 4:
-                        minute_data = 40;
+                        minute_data = 30;
                         break;
                     case 5:
+                        minute_data = 40;
+                        break;
+                    case 6:
                         minute_data = 50;
                         break;
 
@@ -253,25 +263,29 @@ public class SmsActivity extends AppCompatActivity {
 
                 switch (position) {
                     case 0:
-                        action_data = "Master Proposal";
+                        //
                         break;
                     case 1:
-                        action_data = "Media question";
+                        action_data = "Master Proposal";
                         break;
                     case 2:
-                        action_data = "Event QT";
+                        action_data = "Media question";
                         break;
                     case 3:
-                        action_data = "PR Offer";
+                        action_data = "Event QT";
                         break;
                     case 4:
-                        action_data = "Power Point Send";
+                        action_data = "PR Offer";
                         break;
                     case 5:
-                        action_data = "Radio Offer";
+                        action_data = "Power Point Send";
                         break;
                     case 6:
+                        action_data = "Radio Offer";
+                        break;
+                    case 7:
                         action_edittext.setVisibility(View.VISIBLE);
+                        action_data = "";
                         break;
 
                     default:
@@ -316,8 +330,12 @@ public class SmsActivity extends AppCompatActivity {
 
                 String actiondata = action_edittext.getText().toString();
 
-                shared = getSharedPreferences("A", Context.MODE_PRIVATE);   // get the sharedpreference set named "A"
-                float psi = shared.getInt("psi", 0);  // get value from key but return 0 if nothing is set
+                if (subdata.equals("") || companydata.equals("") || placedata.equals("")) {
+                    Toast.makeText(getApplicationContext()," Please file up your data",Toast.LENGTH_LONG).show();
+                } else {
+
+                    shared = getSharedPreferences("A", Context.MODE_PRIVATE);   // get the sharedpreference set named "A"
+                    float psi = shared.getInt("psi", 0);  // get value from key but return 0 if nothing is set
 
 
                 /*Toast.makeText(SmsActivity.this,
@@ -331,26 +349,26 @@ public class SmsActivity extends AppCompatActivity {
                         Toast.LENGTH_LONG).show();*/
 
 
-                String one = "01711425005";
-                String two = "01730012307";
-                Intent smsIntent = new Intent(Intent.ACTION_VIEW);
-                smsIntent.setType("vnd.android-dir/mms-sms");
-                smsIntent.putExtra("address", one + ";" + two);
-                smsIntent.putExtra("sms_body", (
-                        "RSN :"+psi+"\n\n"+
-                        "Sub :"+subdata+"এর সাথে মিটিং "+"\n\n"+
-                        "Company :"+companydata+"\n\n"+
-                        "Place :"+placedata+"\n\n"+
-                        "Meeting Date :" + dayy + "-" + monthh + "-" + yearr+"\n\n"+
-                        "Meeting Time :" + hour_data +"-"+minute_data+"-"+am_data+"\n\n"+
-                        "Action :"+action_data+ " " +actiondata+"\n\n"+
-                "Sending Date :"+date));
-                startActivity(smsIntent);
+                    String one = "01711425005";
+                    String two = "01730012307";
+                    Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+                    smsIntent.setType("vnd.android-dir/mms-sms");
+                    smsIntent.putExtra("address", one + ";" + two);
+                    smsIntent.putExtra("sms_body", (
+                                    "RSN :" + psi + "\n\n" +
+                                    "Sub :" + subdata + " এর সাথে মিটিং " + "\n\n" +
+                                    "Company :" + companydata + "\n\n" +
+                                    "Place :" + placedata + "\n\n" +
+                                    "Meeting Date :" + dayy + "-" + monthh + "-" + yearr + "\n\n" +
+                                    "Meeting Time :" + hour_data + "-" + minute_data + " " + am_data + "\n\n" +
+                                    "Action :" + action_data + " " + actiondata + "\n\n" +
+                                    "Sending Date :" + date));
+                    startActivity(smsIntent);
 
 
-                Toast.makeText(SmsActivity.this, "আপনার বার্তার জন্য আপনাকে ধন্যবাদ ", Toast.LENGTH_LONG).show();
-                finish();
-
+                    Toast.makeText(SmsActivity.this, "আপনার বার্তার জন্য আপনাকে ধন্যবাদ ", Toast.LENGTH_LONG).show();
+                    finish();
+                }
             }
         });
 
