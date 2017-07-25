@@ -47,7 +47,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:orientation="vertical"
-                    android:weightSum="8">
+                    android:weightSum="9">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -58,11 +58,10 @@
                             android:id="@+id/NameEditText"
                             android:layout_width="match_parent"
                             android:layout_height="70dp"
+                            android:layout_alignParentEnd="true"
                             android:layout_marginTop="15dp"
-                            android:layout_weight="1"
                             android:background="@drawable/ractangle_dark_border"
                             android:hint="Person Name"
-                            android:inputType="textPersonName"
                             android:textAlignment="center" />
                     </LinearLayout>
 
@@ -122,7 +121,8 @@
                         android:layout_height="0dp"
                         android:layout_marginTop="15dp"
                         android:layout_weight="1"
-                        android:weightSum="3">
+                        android:weightSum="3"
+                        android:background="@drawable/ractangle_dark_border">
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -180,16 +180,100 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1">
+                        android:layout_weight="2"
+                        android:background="@drawable/ractangle_dark_border"
+                        android:weightSum="2">
 
-                        <Spinner
-                            android:id="@+id/ActionSpinner"
-                            android:layout_width="match_parent"
-                            android:layout_height="70dp"
-                            android:layout_marginTop="15dp"
-                            android:background="#FFFFFF"
-                            android:dropDownWidth="match_parent"
-                            android:gravity="center"></Spinner>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/ActionCheckBoxOne"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="MSTR PRO"
+                                android:textSize="18sp"></CheckBox>
+                            <CheckBox
+                                android:id="@+id/ActionCheckBoxTwo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="MEDIA QT"
+                                android:textSize="18sp"></CheckBox>
+                            <CheckBox
+                                android:id="@+id/ActionCheckBoxThree"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="EVENT QT"
+                                android:textSize="18sp"></CheckBox>
+
+                            <CheckBox
+                                android:id="@+id/ActionCheckBoxFour"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="PR OFFER"
+                                android:textSize="18sp"></CheckBox>
+                            <CheckBox
+                                android:id="@+id/ActionCheckBoxFive"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="PPT SEND"
+                                android:textSize="18sp"></CheckBox>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <CheckBox
+                                android:id="@+id/ActionCheckBoxSix"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="PRTL PRO"
+                                android:textSize="18sp"></CheckBox>
+                            <CheckBox
+                                android:id="@+id/ActionCheckBoxSeven"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="ONLIN TV"
+                                android:textSize="18sp"></CheckBox>
+                            <CheckBox
+                                android:id="@+id/ActionCheckBoxEight"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="NEWS COV"
+                                android:textSize="18sp"></CheckBox>
+
+                            <CheckBox
+                                android:id="@+id/ActionCheckBoxNine"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="DOCU PRO"
+                                android:textSize="18sp"></CheckBox>
+                            <CheckBox
+                                android:id="@+id/ActionCheckBoxTen"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="VDO STILL"
+                                android:textSize="18sp"></CheckBox>
+
+                        </LinearLayout>
+
 
                     </LinearLayout>
 
@@ -202,10 +286,9 @@
                             android:id="@+id/OtherActionEditText"
                             android:layout_width="match_parent"
                             android:layout_height="70dp"
-                            android:hint="type your Action"
+                            android:hint="Other Action"
                             android:background="@drawable/ractangle_dark_border"
-                            android:visibility="invisible"
-                            android:textAlignment="center" />
+                            android:textAlignment="center"/>
 
                     </LinearLayout>
 
@@ -222,7 +305,6 @@
                             android:layout_alignParentStart="true"
                             android:layout_marginLeft="15dp"
                             android:layout_marginRight="15dp"
-                            android:layout_marginTop="15dp"
                             android:background="@drawable/send_button"
                             android:text="Send SMS"
                             android:textSize="24sp"></Button>

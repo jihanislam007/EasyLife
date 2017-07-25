@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CalendarView;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -26,8 +27,11 @@ public class MailActivity extends AppCompatActivity {
 
     EditText sub, company, place, action_edittext;
     CalendarView calender;
-    Spinner hour, minute, am, action;
+    Spinner hour, minute, am;
     Button sendsms;
+
+    CheckBox check_one, check_two, check_three, check_four, check_five, check_six , check_seven , check_eight , check_nine , check_ten;
+
 
     int dayy;
     int monthh;
@@ -60,10 +64,21 @@ public class MailActivity extends AppCompatActivity {
         hour = (Spinner) findViewById(R.id.hourSpinner);
         minute = (Spinner) findViewById(R.id.MinuteSpinner);
         am = (Spinner) findViewById(R.id.AmPmSpinner);
-        action = (Spinner) findViewById(R.id.ActionSpinner);
+        //    action = (Spinner) findViewById(R.id.ActionSpinner);
+
+        check_one = (CheckBox) findViewById(R.id.ActionCheckBoxOne);
+        check_two = (CheckBox) findViewById(R.id.ActionCheckBoxTwo);
+        check_three = (CheckBox) findViewById(R.id.ActionCheckBoxThree);
+        check_four = (CheckBox) findViewById(R.id.ActionCheckBoxFour);
+        check_five = (CheckBox) findViewById(R.id.ActionCheckBoxFive);
+        check_six = (CheckBox) findViewById(R.id.ActionCheckBoxSix);
+        check_seven = (CheckBox) findViewById(R.id.ActionCheckBoxSeven);
+        check_eight = (CheckBox) findViewById(R.id.ActionCheckBoxEight);
+        check_nine = (CheckBox) findViewById(R.id.ActionCheckBoxNine);
+        check_ten = (CheckBox) findViewById(R.id.ActionCheckBoxTen);
+    //    other = (CheckBox) findViewById(R.id.ActionCheckBoxOther);
 
         sendsms = (Button) findViewById(R.id.sendButton);
-
 
         //////////////for spinner data/////////////////////////////
         hour_list.add("Hour");
@@ -91,14 +106,6 @@ public class MailActivity extends AppCompatActivity {
         am_list.add("AM");
         am_list.add("PM");
 
-        action_list.add("Action");
-        action_list.add("Master Proposal");
-        action_list.add("Media question");
-        action_list.add("Event QT");
-        action_list.add("PR Offer");
-        action_list.add("Power Point Send");
-        action_list.add("Radio Offer");
-        action_list.add("Other");
 
         /////////////////////////for Hour spinner///////////////////
         ArrayAdapter<String> HourAdapter = new ArrayAdapter<String>
@@ -252,7 +259,7 @@ public class MailActivity extends AppCompatActivity {
             }
         });
 
-        /////////////////////////for Action spinner///////////////////
+   /*     /////////////////////////for Action spinner///////////////////
         ArrayAdapter<String> ActionAdapter = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, action_list);
 
@@ -299,9 +306,9 @@ public class MailActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parentView) {
-                Toast.makeText(MailActivity.this, "You did not select Action", Toast.LENGTH_LONG).show();
+                Toast.makeText(SmsActivity.this, "You did not select Action", Toast.LENGTH_LONG).show();
             }
-        });
+        });*/
 
 
 ///////////////////////////working for calender view/////////////////
@@ -315,11 +322,13 @@ public class MailActivity extends AppCompatActivity {
         });
 
 
-        /////////////////////date and time picker////////////////////////////
+        /////////////////////date picker////////////////////////////
         String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
         //tv.setText(currentDateTimeString);
         final String date = currentDateTimeString;
         //   Toast.makeText(SendTvfotejMessageActivity.this, date , Toast.LENGTH_LONG).show();
+
+
 
         sendsms.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -330,6 +339,46 @@ public class MailActivity extends AppCompatActivity {
                 String placedata = place.getText().toString();
 
                 String actiondata = action_edittext.getText().toString();
+//////////////////////for CheckBox////////////////////////
+
+
+                StringBuilder output = new StringBuilder();
+
+                if(check_one.isChecked()){
+                    output.append(", MSTR PRO");
+                }
+                if(check_two.isChecked()){
+                    output.append(", MEDIA QT");
+                }
+                if(check_three.isChecked()){
+                    output.append(", EVENT QT");
+                }
+                if(check_four.isChecked()){
+                    output.append(", PR OFFER");
+                }
+                if(check_five.isChecked()){
+                    output.append(", PPT SEND");
+                }
+                if(check_six.isChecked()){
+                    output.append(", PRTL PRO");
+                }
+
+                if(check_seven.isChecked()){
+                    output.append(", ONLIN TV");
+                }
+
+                if(check_eight.isChecked()){
+                    output.append(", NEWS COV");
+                }
+
+                if(check_nine.isChecked()){
+                    output.append(", DOCU PRO");
+                }
+
+                if(check_ten.isChecked()){
+                    output.append(", VDO STILL");
+                }
+
 
                 if (subdata.equals("") || companydata.equals("") || placedata.equals("")) {
                     Toast.makeText(getApplicationContext()," Please file up your data",Toast.LENGTH_LONG).show();
@@ -347,14 +396,14 @@ public class MailActivity extends AppCompatActivity {
                     emailIntent.setType("text/plain");
                     emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
                     emailIntent.putExtra(Intent.EXTRA_CC, CC);
-                    emailIntent.putExtra(Intent.EXTRA_SUBJECT, subdata + " এর সাথে মিটিং ");
+                    emailIntent.putExtra(Intent.EXTRA_SUBJECT, subdata);
                     emailIntent.putExtra(Intent.EXTRA_TEXT, (
-                            "RMN :" + psi + "\n\n" +
+                            "RSN :" + psi + "\n\n" +
                                     "Company :" + companydata + "\n\n" +
                                     "Place :" + placedata + "\n\n" +
                                     "Meeting Date :" + dayy + "-" + monthh + "-" + yearr + "\n\n" +
                                     "Meeting Time :" + hour_data + "-" + minute_data + " " + am_data + "\n\n" +
-                                    "Action :" + action_data + " " + actiondata + "\n\n" +
+                                    "Action :" + actiondata + " " + output.toString() + "\n\n" +
                                     "Sending Date :" + date));
 
                     try {

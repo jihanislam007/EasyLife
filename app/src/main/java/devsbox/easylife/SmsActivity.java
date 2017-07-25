@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CalendarView;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -23,8 +24,10 @@ import java.util.List;
 public class SmsActivity extends AppCompatActivity {
     EditText sub, company, place, action_edittext;
     CalendarView calender;
-    Spinner hour, minute, am, action;
+    Spinner hour, minute, am;
     Button sendsms;
+
+    CheckBox check_one, check_two, check_three, check_four, check_five, check_six , check_seven , check_eight , check_nine , check_ten;
 
     int dayy;
     int monthh;
@@ -57,7 +60,19 @@ public class SmsActivity extends AppCompatActivity {
         hour = (Spinner) findViewById(R.id.hourSpinner);
         minute = (Spinner) findViewById(R.id.MinuteSpinner);
         am = (Spinner) findViewById(R.id.AmPmSpinner);
-        action = (Spinner) findViewById(R.id.ActionSpinner);
+        //    action = (Spinner) findViewById(R.id.ActionSpinner);
+
+        check_one = (CheckBox) findViewById(R.id.ActionCheckBoxOne);
+        check_two = (CheckBox) findViewById(R.id.ActionCheckBoxTwo);
+        check_three = (CheckBox) findViewById(R.id.ActionCheckBoxThree);
+        check_four = (CheckBox) findViewById(R.id.ActionCheckBoxFour);
+        check_five = (CheckBox) findViewById(R.id.ActionCheckBoxFive);
+        check_six = (CheckBox) findViewById(R.id.ActionCheckBoxSix);
+        check_seven = (CheckBox) findViewById(R.id.ActionCheckBoxSeven);
+        check_eight = (CheckBox) findViewById(R.id.ActionCheckBoxEight);
+        check_nine = (CheckBox) findViewById(R.id.ActionCheckBoxNine);
+        check_ten = (CheckBox) findViewById(R.id.ActionCheckBoxTen);
+    //    other = (CheckBox) findViewById(R.id.ActionCheckBoxOther);
 
         sendsms = (Button) findViewById(R.id.sendButton);
 
@@ -88,14 +103,6 @@ public class SmsActivity extends AppCompatActivity {
         am_list.add("AM");
         am_list.add("PM");
 
-        action_list.add("Action");
-        action_list.add("Master Proposal");
-        action_list.add("Media question");
-        action_list.add("Event QT");
-        action_list.add("PR Offer");
-        action_list.add("Power Point Send");
-        action_list.add("Radio Offer");
-        action_list.add("Other");
 
         /////////////////////////for Hour spinner///////////////////
         ArrayAdapter<String> HourAdapter = new ArrayAdapter<String>
@@ -249,7 +256,7 @@ public class SmsActivity extends AppCompatActivity {
             }
         });
 
-        /////////////////////////for Action spinner///////////////////
+   /*     /////////////////////////for Action spinner///////////////////
         ArrayAdapter<String> ActionAdapter = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item, action_list);
 
@@ -298,7 +305,7 @@ public class SmsActivity extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> parentView) {
                 Toast.makeText(SmsActivity.this, "You did not select Action", Toast.LENGTH_LONG).show();
             }
-        });
+        });*/
 
 
 ///////////////////////////working for calender view/////////////////
@@ -319,6 +326,7 @@ public class SmsActivity extends AppCompatActivity {
         //   Toast.makeText(SendTvfotejMessageActivity.this, date , Toast.LENGTH_LONG).show();
 
 
+
         sendsms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -329,9 +337,51 @@ public class SmsActivity extends AppCompatActivity {
                 String placedata = place.getText().toString();
 
                 String actiondata = action_edittext.getText().toString();
+//////////////////////for CheckBox////////////////////////
+
+
+                StringBuilder output = new StringBuilder();
+
+                if(check_one.isChecked()){
+                    output.append(", MSTR PRO");
+                }
+                if(check_two.isChecked()){
+                    output.append(", MEDIA QT");
+                }
+                if(check_three.isChecked()){
+                    output.append(", EVENT QT");
+                }
+                if(check_four.isChecked()){
+                    output.append(", PR OFFER");
+                }
+                if(check_five.isChecked()){
+                    output.append(", PPT SEND");
+                }
+                if(check_six.isChecked()){
+                    output.append(", PRTL PRO");
+                }
+
+                if(check_seven.isChecked()){
+                    output.append(", ONLIN TV");
+                }
+
+                if(check_eight.isChecked()){
+                    output.append(", NEWS COV");
+                }
+
+                if(check_nine.isChecked()){
+                    output.append(", DOCU PRO");
+                }
+
+                if(check_ten.isChecked()){
+                    output.append(", VDO STILL");
+                }
+
+
+           //     Toast.makeText(getApplicationContext(),output.toString(),Toast.LENGTH_LONG).show();
 
                 if (subdata.equals("") || companydata.equals("") || placedata.equals("")) {
-                    Toast.makeText(getApplicationContext()," Please file up your data",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), " Please file up your data", Toast.LENGTH_LONG).show();
                 } else {
 
                     shared = getSharedPreferences("A", Context.MODE_PRIVATE);   // get the sharedpreference set named "A"
@@ -355,13 +405,13 @@ public class SmsActivity extends AppCompatActivity {
                     smsIntent.setType("vnd.android-dir/mms-sms");
                     smsIntent.putExtra("address", one + ";" + two);
                     smsIntent.putExtra("sms_body", (
-                                    "RSN :" + psi + "\n\n" +
-                                    "Sub :" + subdata + " এর সাথে মিটিং " + "\n\n" +
+                              "RSN :" + psi + "\n\n" +
+                                    "Sub :" + subdata + "\n\n" +
                                     "Company :" + companydata + "\n\n" +
                                     "Place :" + placedata + "\n\n" +
                                     "Meeting Date :" + dayy + "-" + monthh + "-" + yearr + "\n\n" +
                                     "Meeting Time :" + hour_data + "-" + minute_data + " " + am_data + "\n\n" +
-                                    "Action :" + action_data + " " + actiondata + "\n\n" +
+                                    "Action :" + actiondata + " " + output.toString() + "\n\n" +
                                     "Sending Date :" + date));
                     startActivity(smsIntent);
 
