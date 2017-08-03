@@ -30,7 +30,8 @@ public class MailActivity extends AppCompatActivity {
     Spinner hour, minute, am;
     Button sendsms;
 
-    CheckBox check_one, check_two, check_three, check_four, check_five, check_six , check_seven , check_eight , check_nine , check_ten;
+    CheckBox check_one, check_two, check_three, check_four, check_five, check_six , check_seven , check_eight , check_nine , check_ten,
+    check_elaven, check_twelve, check_therteen, check_fourteen;;
 
 
     int dayy;
@@ -76,7 +77,11 @@ public class MailActivity extends AppCompatActivity {
         check_eight = (CheckBox) findViewById(R.id.ActionCheckBoxEight);
         check_nine = (CheckBox) findViewById(R.id.ActionCheckBoxNine);
         check_ten = (CheckBox) findViewById(R.id.ActionCheckBoxTen);
-    //    other = (CheckBox) findViewById(R.id.ActionCheckBoxOther);
+
+        check_elaven = (CheckBox) findViewById(R.id.ActionCheckBoxElaben);
+        check_twelve = (CheckBox) findViewById(R.id.ActionCheckBoxTewelv);
+        check_therteen = (CheckBox) findViewById(R.id.ActionCheckBoxTherteen);
+        check_fourteen = (CheckBox) findViewById(R.id.ActionCheckBoxFourteen);
 
         sendsms = (Button) findViewById(R.id.sendButton);
 
@@ -344,40 +349,57 @@ public class MailActivity extends AppCompatActivity {
 
                 StringBuilder output = new StringBuilder();
 
-                if(check_one.isChecked()){
-                    output.append(", MSTR PRO");
+                if (check_one.isChecked()) {
+                    output.append(", MASTER PROPOSAL");
                 }
-                if(check_two.isChecked()){
+                if (check_two.isChecked()) {
+                    output.append(", PORTAL PROPOSAL");
+                }
+                if (check_three.isChecked()) {
+                    output.append(", ONLINE TV PROPOSAL");
+                }
+                if (check_four.isChecked()) {
+                    output.append(", EVENT PROPOSAL");
+                }
+                if (check_five.isChecked()) {
+                    output.append(", NEWS COVERAGE");
+                }
+                if (check_six.isChecked()) {
+                    output.append(", DOCUMENTARY PRO");
+                }
+
+                if (check_seven.isChecked()) {
+                    output.append(", VDO STILL PROPOSAL");
+                }
+
+                if (check_eight.isChecked()) {
+                    output.append(", PR OFFER SEND");
+                }
+
+                if (check_nine.isChecked()) {
+                    output.append(", POWER POINT SEND");
+                }
+
+                if (check_ten.isChecked()) {
                     output.append(", MEDIA QT");
                 }
-                if(check_three.isChecked()){
+
+                if (check_elaven.isChecked()) {
                     output.append(", EVENT QT");
                 }
-                if(check_four.isChecked()){
-                    output.append(", PR OFFER");
-                }
-                if(check_five.isChecked()){
-                    output.append(", PPT SEND");
-                }
-                if(check_six.isChecked()){
-                    output.append(", PRTL PRO");
+
+                if (check_twelve.isChecked()) {
+                    output.append(", BILL TO BE SEND");
                 }
 
-                if(check_seven.isChecked()){
-                    output.append(", ONLIN TV");
+                if (check_therteen.isChecked()) {
+                    output.append(", MEETING @ RAPID PR");
                 }
 
-                if(check_eight.isChecked()){
-                    output.append(", NEWS COV");
+                if (check_fourteen.isChecked()) {
+                    output.append(", METTING @ CLIENT");
                 }
 
-                if(check_nine.isChecked()){
-                    output.append(", DOCU PRO");
-                }
-
-                if(check_ten.isChecked()){
-                    output.append(", VDO STILL");
-                }
 
 
                 if (subdata.equals("") || companydata.equals("") || placedata.equals("")) {
@@ -385,7 +407,7 @@ public class MailActivity extends AppCompatActivity {
                 } else {
 
                     shared = getSharedPreferences("A", Context.MODE_PRIVATE);   // get the sharedpreference set named "A"
-                    float psi = shared.getInt("psi", 0);  // get value from key but return 0 if nothing is set
+                    int psi = shared.getInt("psi", 0);  // get value from key but return 0 if nothing is set
 
                     Log.i("Send email", "");
                     String[] TO = {"Info.rapidpr@gmail.com , ostitto.papa@gmail.com , sishakhor@gmail.com , easylife.rapidpr@gmail.com"};
