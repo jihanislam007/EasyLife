@@ -135,11 +135,16 @@
                                 android:orientation="horizontal"
                                 android:padding="3dp">
 
-                                <ImageButton
-                                    android:id="@+id/media_covaragViewTextView"
+                                <TextView
+                                    android:id="@+id/SecondTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/two" />
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="কার্ড \nদেখে \nপ্রস্ততাব \nপ্রেরণ "
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="20sp" />
 
                             </LinearLayout>
 

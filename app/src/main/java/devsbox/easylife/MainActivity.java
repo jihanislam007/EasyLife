@@ -9,11 +9,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
 
     ImageView MyAppoinment;
+    TextView second;
     ImageView mail, sms;
     Dialog mDialog;
 
@@ -27,11 +29,23 @@ public class MainActivity extends AppCompatActivity {
 
 
         MyAppoinment = (ImageView) findViewById(R.id.MyAppoinmentTextView);
+        second = (TextView) findViewById(R.id.SecondTextView);
+
+
         MyAppoinment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 pop();
                 mDialog.show();
+            }
+        });
+
+
+        second.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this,SecondActivity.class);
+                startActivity(in);
             }
         });
     }
@@ -59,7 +73,9 @@ public class MainActivity extends AppCompatActivity {
                 editor.putInt("psi", psivalue);
                 editor.commit(); // commit it when you are done.
 
-                Intent in = new Intent(MainActivity.this , MailActivity.class);
+                Intent in = new Intent(MainActivity.this , SmsActivity.class);
+              //  int int_value = 1;
+                in.putExtra("mail_or_sms",1);
                 startActivity(in);
             }
         });
@@ -74,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
                 editor.commit(); // commit it when you are done.
 
                 Intent in = new Intent(MainActivity.this , SmsActivity.class);
+                in.putExtra("mail_or_sms",2);
                 startActivity(in);
             }
         });

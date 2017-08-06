@@ -3,9 +3,11 @@ package devsbox.easylife;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -331,6 +333,119 @@ public class SmsActivity extends AppCompatActivity {
         //   Toast.makeText(SendTvfotejMessageActivity.this, date , Toast.LENGTH_LONG).show();
 
 
+
+
+
+        Intent check = getIntent();
+        int check_value = check.getIntExtra("mail_or_sms",0);
+
+        if(check_value==1){
+
+            sendsms.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    String subdata = sub.getText().toString();
+                    String companydata = company.getText().toString();
+                    String placedata = place.getText().toString();
+
+                    String actiondata = action_edittext.getText().toString();
+
+
+                    //////////////////////for CheckBox///////////////////////
+
+                   StringBuilder output = new StringBuilder();
+
+                    if (check_one.isChecked()) {
+                        output.append(", MASTER PROPOSAL");
+                    }
+                    if (check_two.isChecked()) {
+                        output.append(", PORTAL PROPOSAL");
+                    }
+                    if (check_three.isChecked()) {
+                        output.append(", ONLINE TV PROPOSAL");
+                    }
+                    if (check_four.isChecked()) {
+                        output.append(", EVENT PROPOSAL");
+                    }
+                    if (check_five.isChecked()) {
+                        output.append(", NEWS COVERAGE");
+                    }
+                    if (check_six.isChecked()) {
+                        output.append(", DOCUMENTARY PRO");
+                    }
+
+                    if (check_seven.isChecked()) {
+                        output.append(", VDO STILL PROPOSAL");
+                    }
+
+                    if (check_eight.isChecked()) {
+                        output.append(", PR OFFER SEND");
+                    }
+
+                    if (check_nine.isChecked()) {
+                        output.append(", POWER POINT SEND");
+                    }
+
+                    if (check_ten.isChecked()) {
+                        output.append(", MEDIA QT");
+                    }
+
+                    if (check_elaven.isChecked()) {
+                        output.append(", EVENT QT");
+                    }
+
+                    if (check_twelve.isChecked()) {
+                        output.append(", BILL TO BE SEND");
+                    }
+
+                    if (check_therteen.isChecked()) {
+                        output.append(", MEETING @ RAPID PR");
+                    }
+
+                    if (check_fourteen.isChecked()) {
+                        output.append(", METTING @ CLIENT");
+                    }
+
+                    if (subdata.equals("") || companydata.equals("") || placedata.equals("")) {
+                        Toast.makeText(getApplicationContext()," Please file up your data",Toast.LENGTH_LONG).show();
+                    } else {
+
+                        shared = getSharedPreferences("A", Context.MODE_PRIVATE);   // get the sharedpreference set named "A"
+                        int psi = shared.getInt("psi", 0);  // get value from key but return 0 if nothing is set
+
+                        Log.i("Send email", "");
+                        String[] TO = {"Info.rapidpr@gmail.com , ostitto.papa@gmail.com , sishakhor@gmail.com , easylife.rapidpr@gmail.com"};
+                        String[] CC = {""};
+                        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+
+                        emailIntent.setData(Uri.parse("mailto:"));
+                        emailIntent.setType("text/plain");
+                        emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
+                        emailIntent.putExtra(Intent.EXTRA_CC, CC);
+                        emailIntent.putExtra(Intent.EXTRA_SUBJECT, subdata);
+                        emailIntent.putExtra(Intent.EXTRA_TEXT, (
+                                "RSN :" + psi + "\n\n" +
+                                        "Company :" + companydata + "," +
+                                        "Place :" + placedata + "," +
+                                        "Meeting Date :" + dayy + "-" + monthh + "-" + yearr + "," +
+                                        "Meeting Time :" + hour_data + "-" + minute_data + " " + am_data + "," +
+                                        "Action :" + actiondata + " " + output.toString() + "," +
+                                        "Sending Date :" + date));
+
+                        try {
+                            startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+                            //    finish();
+                            Log.i("sending Finished ...", "");
+                        } catch (android.content.ActivityNotFoundException ex) {
+                            Toast.makeText(SmsActivity.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+            });
+        }
+        else if(check_value==2){
+
         sendsms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -341,8 +456,9 @@ public class SmsActivity extends AppCompatActivity {
                 String placedata = place.getText().toString();
 
                 String actiondata = action_edittext.getText().toString();
-//////////////////////for CheckBox////////////////////////
 
+
+                //////////////////////for CheckBox///////////////////////
 
                 StringBuilder output = new StringBuilder();
 
@@ -397,7 +513,6 @@ public class SmsActivity extends AppCompatActivity {
                     output.append(", METTING @ CLIENT");
                 }
 
-
                 //     Toast.makeText(getApplicationContext(),output.toString(),Toast.LENGTH_LONG).show();
 
                 if (subdata.equals("") || companydata.equals("") || placedata.equals("")) {
@@ -408,42 +523,32 @@ public class SmsActivity extends AppCompatActivity {
                     int psi = shared.getInt("psi", 0);  // get value from key but return 0 if nothing is set
 
 
-                /*Toast.makeText(SmsActivity.this,
-                        "RSN :"+psi+"\n\n"+
-                        "Sub :"+subdata+"\n\n"+
-                        "Company :"+companydata+"\n\n"+
-                        "Place :"+placedata+"\n\n"+
-                        "Calender :" + dayy + "-" + monthh + "-" + yearr+"\n\n"+
-                        "Time :" + hour_data +"-"+minute_data+"-"+am_data+"\n\n"+
-                        "Action :"+action_data+actiondata,
-                        Toast.LENGTH_LONG).show();*/
-
-
                     String one = "01711425005";
-                    String two = "01730012307";
+                    String two = "01730012300";
                     String three = "01941131313";
-                    String four = "01709955700";
+                    String four = "01730012301";
                     String five = "01776001188";
                     Intent smsIntent = new Intent(Intent.ACTION_VIEW);
                     smsIntent.setType("vnd.android-dir/mms-sms");
                     smsIntent.putExtra("address", one + ";" + two+ ";" + three+ ";" + four+ ";" + five);
                     smsIntent.putExtra("sms_body", (
                             "RSN :" + psi + "\n\n" +
-                                    "Sub :" + subdata + "\n\n" +
-                                    "Company :" + companydata + "\n\n" +
-                                    "Place :" + placedata + "\n\n" +
-                                    "Meeting Date :" + dayy + "-" + monthh + "-" + yearr + "\n\n" +
-                                    "Meeting Time :" + hour_data + "-" + minute_data + " " + am_data + "\n\n" +
-                                    "Action :" + actiondata + " " + output.toString() + "\n\n" +
+                                    "Sub :" + subdata + "," +
+                                    "Company :" + companydata + "," +
+                                    "Place :" + placedata + "," +
+                                    "Meeting Date :" + dayy + "-" + monthh + "-" + yearr + "," +
+                                    "Meeting Time :" + hour_data + "-" + minute_data + " " + am_data + "," +
+                                    "Action :" + actiondata + " " + output.toString() + "," +
                                     "Sending Date :" + date));
                     startActivity(smsIntent);
 
 
-                    Toast.makeText(SmsActivity.this, "আপনার বার্তার জন্য আপনাকে ধন্যবাদ ", Toast.LENGTH_LONG).show();
+                  Toast.makeText(SmsActivity.this, "Your Message is ready to send", Toast.LENGTH_LONG).show();
                     finish();
                 }
             }
         });
+        }
 
     }
 }

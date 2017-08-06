@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_send_message"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#000000">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight=".60"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="#000000">
 
             <TextView
                 android:layout_width="match_parent"
