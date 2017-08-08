@@ -9,8 +9,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:weightSum="8"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:weightSum="8">
 
 
         <LinearLayout
@@ -22,7 +22,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="5.20">
+            android:layout_weight="5.50">
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -36,39 +36,23 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="70dp"
+                        android:layout_height="90dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
                         android:layout_weight="2"
                         android:orientation="horizontal">
 
-                        <LinearLayout
-                            android:layout_width="0dp"
+                        <EditText
+                            android:id="@+id/ThirdPhonEditText"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center">
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/ractangle_dark_border"
+                            android:hint="Phone Number(must)"
+                            android:inputType="phone"
+                            android:textAlignment="center" />
 
-                            <CheckBox
-                                android:id="@+id/ActionCheckBoxMR"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="MR."
-                                android:textSize="18sp"></CheckBox>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center">
-
-                            <CheckBox
-                                android:id="@+id/ActionCheckBoxMRS"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="Mrs. "
-                                android:textSize="18sp"></CheckBox>
-
-                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -82,82 +66,60 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="1"
                             android:layout_marginLeft="15dp"
-                            android:layout_marginRight="15dp">
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1">
 
                             <EditText
-                                android:id="@+id/SecondNameEditText"
+                                android:id="@+id/ThirdPhonEditTextzero"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_alignParentEnd="true"
                                 android:layout_marginTop="15dp"
                                 android:background="@drawable/ractangle_dark_border"
-                                android:hint="Person Name"
+                                android:hint="Phone Number"
                                 android:textAlignment="center" />
 
                         </LinearLayout>
 
 
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="1"
                             android:layout_marginLeft="15dp"
-                            android:layout_marginRight="15dp">
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1">
 
                             <EditText
-                                android:id="@+id/SecondPhonEditTextOne"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_alignParentEnd="true"
-                                android:layout_marginTop="15dp"
-                                android:background="@drawable/ractangle_dark_border"
-                                android:hint="Phone Number(must)"
-                                android:textAlignment="center"
-                                android:inputType="phone"/>
-
-                        </LinearLayout>
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1.20"
-                            android:gravity="center">
-
-                            <Button
-                                android:id="@+id/SecondSendButton"
-                                android:layout_width="match_parent"
-                                android:layout_height="70dp"
-                                android:layout_alignParentEnd="true"
-                                android:layout_alignParentStart="true"
-                                android:layout_marginLeft="55dp"
-                                android:layout_marginRight="55dp"
-                                android:background="@drawable/send_button"
-                                android:text="Send SMS"
-                                android:textSize="24sp"></Button>
-
-                        </LinearLayout>
-
-                       <!-- <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginRight="15dp">
-
-                            <EditText
-                                android:id="@+id/SecondPhonEditTextTwo"
+                                android:id="@+id/ThirdPhonEditTextOne"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_alignParentEnd="true"
                                 android:layout_marginTop="15dp"
                                 android:background="@drawable/ractangle_dark_border"
                                 android:hint="Phone Number"
-                                android:textAlignment="center"
-                                android:inputType="phone"/>
+                                android:inputType="phone"
+                                android:textAlignment="center" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/ThirdPhonEditTextTwo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="15dp"
+                                android:background="@drawable/ractangle_dark_border"
+                                android:hint="Phone Number"
+                                android:inputType="phone"
+                                android:textAlignment="center" />
 
                         </LinearLayout>
 
@@ -165,20 +127,20 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="1"
                             android:layout_marginLeft="15dp"
-                            android:layout_marginRight="15dp">
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1">
 
                             <EditText
-                                android:id="@+id/SecondPhonEditTextThree"
+                                android:id="@+id/ThirdPhonEditTextThree"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_alignParentEnd="true"
                                 android:layout_marginTop="15dp"
                                 android:background="@drawable/ractangle_dark_border"
                                 android:hint="Phone Number"
-                                android:textAlignment="center"
-                                android:inputType="phone"/>
+                                android:inputType="phone"
+                                android:textAlignment="center" />
 
                         </LinearLayout>
 
@@ -186,42 +148,102 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="1"
                             android:layout_marginLeft="15dp"
-                            android:layout_marginRight="15dp">
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1">
 
                             <EditText
-                                android:id="@+id/SecondPhonEditTextFour"
+                                android:id="@+id/ThirdPhonEditTextFour"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_alignParentEnd="true"
                                 android:layout_marginTop="15dp"
                                 android:background="@drawable/ractangle_dark_border"
                                 android:hint="Phone Number"
-                                android:textAlignment="center"
-                                android:inputType="phone"/>
+                                android:inputType="phone"
+                                android:textAlignment="center" />
 
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="1"
                             android:layout_marginLeft="15dp"
-                            android:layout_marginRight="15dp">
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1">
 
                             <EditText
-                                android:id="@+id/SecondPhonEditTextFive"
+                                android:id="@+id/ThirdPhonEditTextFive"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_alignParentEnd="true"
                                 android:layout_marginTop="15dp"
                                 android:background="@drawable/ractangle_dark_border"
                                 android:hint="Phone Number"
-                                android:textAlignment="center"
-                                android:inputType="phone"/>
+                                android:inputType="phone"
+                                android:textAlignment="center" />
 
-                        </LinearLayout>-->
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/ThirdPhonEditTextsix"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="15dp"
+                                android:background="@drawable/ractangle_dark_border"
+                                android:hint="Phone Number"
+                                android:inputType="phone"
+                                android:textAlignment="center" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/ThirdPhonEditTextseven"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="15dp"
+                                android:background="@drawable/ractangle_dark_border"
+                                android:hint="Phone Number"
+                                android:inputType="phone"
+                                android:textAlignment="center" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/ThirdPhonEditTextEight"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="15dp"
+                                android:background="@drawable/ractangle_dark_border"
+                                android:hint="Phone Number"
+                                android:inputType="phone"
+                                android:textAlignment="center" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -233,11 +255,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1.50"
+            android:layout_weight="1.20"
             android:gravity="center">
 
-           <!-- <Button
-                android:id="@+id/SecondSendButton"
+            <Button
+                android:id="@+id/ThirdSendButton"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_alignParentEnd="true"
@@ -246,7 +268,7 @@
                 android:layout_marginRight="55dp"
                 android:background="@drawable/send_button"
                 android:text="Send SMS"
-                android:textSize="24sp"></Button>-->
+                android:textSize="24sp"></Button>
 
         </LinearLayout>
 
