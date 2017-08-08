@@ -211,11 +211,16 @@
                                 android:orientation="horizontal"
                                 android:padding="3dp">
 
-                                <ImageButton
-                                    android:id="@+id/media_monitoring"
+                                <TextView
+                                    android:id="@+id/ThirdTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/three" />
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="ফুটেজ\nপেতে\nহলে "
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="20sp" />
 
                             </LinearLayout>
 

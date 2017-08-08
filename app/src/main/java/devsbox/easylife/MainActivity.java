@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     ImageView MyAppoinment;
-    TextView second;
+    TextView second , third;
     ImageView mail, sms;
     Dialog mDialog;
 
@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         MyAppoinment = (ImageView) findViewById(R.id.MyAppoinmentTextView);
         second = (TextView) findViewById(R.id.SecondTextView);
+        third = (TextView) findViewById(R.id.ThirdTextView);
 
 
         MyAppoinment.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +46,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent in = new Intent(MainActivity.this,SecondActivity.class);
+                startActivity(in);
+            }
+        });
+
+        third.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this,ThirdActivity.class);
                 startActivity(in);
             }
         });
