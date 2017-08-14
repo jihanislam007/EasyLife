@@ -80,11 +80,16 @@
                                 android:orientation="horizontal"
                                 android:padding="3dp">
 
-                                <ImageButton
-                                    android:id="@+id/event_managment"
+                                <TextView
+                                    android:id="@+id/FourTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/four" />
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="সার্ভিসের\nজন্য\nCall, SMS, Email "
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="20sp" />
 
                             </LinearLayout>
 
@@ -155,11 +160,16 @@
                                 android:orientation="horizontal"
                                 android:padding="3dp">
 
-                                <ImageButton
-                                    android:id="@+id/email_marketing"
+                                <TextView
+                                    android:id="@+id/FiveTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/five" />
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="অ্যাপ'স\nডাউনলোড\nকরুন"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="20sp" />
 
                             </LinearLayout>
 
@@ -231,11 +241,16 @@
                                 android:orientation="horizontal"
                                 android:padding="3dp">
 
-                                <ImageButton
-                                    android:id="@+id/agm"
+                                <TextView
+                                    android:id="@+id/SixTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/six" />
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="শুভেচ্ছা\nবিনিময়"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="20sp" />
 
                             </LinearLayout>
 

@@ -18,7 +18,10 @@
         </activity>
         <activity android:name=".SmsActivity" />
         <activity android:name=".SecondActivity" />
-        <activity android:name=".ThirdActivity"></activity>
+        <activity android:name=".ThirdActivity" />
+        <activity android:name=".FourthActivity" />
+        <activity android:name=".FiveActivity" />
+        <activity android:name=".SixActivity"></activity>
     </application>
 
 </manifest>

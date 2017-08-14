@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     ImageView MyAppoinment;
-    TextView second , third;
+    TextView second , third , four ,five ,six;
     ImageView mail, sms;
     Dialog mDialog;
 
@@ -31,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
         MyAppoinment = (ImageView) findViewById(R.id.MyAppoinmentTextView);
         second = (TextView) findViewById(R.id.SecondTextView);
         third = (TextView) findViewById(R.id.ThirdTextView);
+        four = (TextView) findViewById(R.id.FourTextView);
+        five = (TextView) findViewById(R.id.FiveTextView);
+        six = (TextView) findViewById(R.id.SixTextView);
 
 
         MyAppoinment.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +57,30 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent in = new Intent(MainActivity.this,ThirdActivity.class);
+                startActivity(in);
+            }
+        });
+
+        four.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this,FourthActivity.class);
+                startActivity(in);
+            }
+        });
+
+        five.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this,FiveActivity.class);
+                startActivity(in);
+            }
+        });
+
+        six.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this,SixActivity.class);
                 startActivity(in);
             }
         });

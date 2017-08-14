@@ -1,6 +1,5 @@
 package devsbox.easylife;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -18,9 +17,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import java.text.DateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class SmsActivity extends AppCompatActivity {
@@ -326,11 +323,11 @@ public class SmsActivity extends AppCompatActivity {
         });
 
 
-        /////////////////////date picker////////////////////////////
+        /*/////////////////////date picker////////////////////////////
         String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
         //tv.setText(currentDateTimeString);
         final String date = currentDateTimeString;
-        //   Toast.makeText(SendTvfotejMessageActivity.this, date , Toast.LENGTH_LONG).show();
+        //   Toast.makeText(SendTvfotejMessageActivity.this, date , Toast.LENGTH_LONG).show();*/
 
 
 
@@ -411,8 +408,8 @@ public class SmsActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext()," Please file up your data",Toast.LENGTH_LONG).show();
                     } else {
 
-                        shared = getSharedPreferences("A", Context.MODE_PRIVATE);   // get the sharedpreference set named "A"
-                        int psi = shared.getInt("psi", 0);  // get value from key but return 0 if nothing is set
+                        /*shared = getSharedPreferences("A", Context.MODE_PRIVATE);   // get the sharedpreference set named "A"
+                        int psi = shared.getInt("psi", 0);  // get value from key but return 0 if nothing is set*/
 
                         Log.i("Send email", "");
                         String[] TO = {"Info.rapidpr@gmail.com , ostitto.papa@gmail.com , sishakhor@gmail.com , easylife.rapidpr@gmail.com"};
@@ -425,13 +422,11 @@ public class SmsActivity extends AppCompatActivity {
                         emailIntent.putExtra(Intent.EXTRA_CC, CC);
                         emailIntent.putExtra(Intent.EXTRA_SUBJECT, subdata);
                         emailIntent.putExtra(Intent.EXTRA_TEXT, (
-                                "RSN :" + psi + "\n\n" +
-                                        "Company :" + companydata + "," +
-                                        "Place :" + placedata + "," +
-                                        "Meeting Date :" + dayy + "-" + monthh + "-" + yearr + "," +
-                                        "Meeting Time :" + hour_data + "-" + minute_data + " " + am_data + "," +
-                                        "Action :" + actiondata + " " + output.toString() + "," +
-                                        "Sending Date :" + date));
+                                        companydata + "," +
+                                        placedata + "," +
+                                        dayy + "-" + monthh + "-" + yearr + "," +
+                                        hour_data + "-" + minute_data + " " + am_data + "," +
+                                        actiondata + " " + output.toString()));
 
                         try {
                             startActivity(Intent.createChooser(emailIntent, "Send mail..."));
@@ -519,27 +514,21 @@ public class SmsActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), " Please file up your data", Toast.LENGTH_LONG).show();
                 } else {
 
-                    shared = getSharedPreferences("A", Context.MODE_PRIVATE);   // get the sharedpreference set named "A"
-                    int psi = shared.getInt("psi", 0);  // get value from key but return 0 if nothing is set
+                   /* shared = getSharedPreferences("A", Context.MODE_PRIVATE);   // get the sharedpreference set named "A"
+                    int psi = shared.getInt("psi", 0);  // get value from key but return 0 if nothing is set*/
 
 
                     String one = "01711425005";
-                    String two = "01730012300";
-                    String three = "01941131313";
-                    String four = "01730012301";
-                    String five = "01776001188";
                     Intent smsIntent = new Intent(Intent.ACTION_VIEW);
                     smsIntent.setType("vnd.android-dir/mms-sms");
-                    smsIntent.putExtra("address", one + ";" + two+ ";" + three+ ";" + four+ ";" + five);
+                    smsIntent.putExtra("address", one );
                     smsIntent.putExtra("sms_body", (
-                            "RSN :" + psi + "\n\n" +
-                                    "Sub :" + subdata + "," +
-                                    "Company :" + companydata + "," +
-                                    "Place :" + placedata + "," +
-                                    "Meeting Date :" + dayy + "-" + monthh + "-" + yearr + "," +
-                                    "Meeting Time :" + hour_data + "-" + minute_data + " " + am_data + "," +
-                                    "Action :" + actiondata + " " + output.toString() + "," +
-                                    "Sending Date :" + date));
+                                    subdata + "," +
+                                    companydata + "," +
+                                    placedata + "," +
+                                    dayy + "-" + monthh + "-" + yearr + "," +
+                                    hour_data + "-" + minute_data + " " + am_data + "," +
+                                    actiondata + " " + output.toString()));
                     startActivity(smsIntent);
 
 
