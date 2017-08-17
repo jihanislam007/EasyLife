@@ -100,11 +100,16 @@
                                 android:orientation="horizontal"
                                 android:padding="3dp">
 
-                                <ImageButton
-                                    android:id="@+id/vedio"
+                                <TextView
+                                    android:id="@+id/SevenTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/seven" />
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="রিয়েল\nএস্টেট\nঅফার"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="20sp" />
 
                             </LinearLayout>
 
@@ -180,11 +185,16 @@
                                 android:orientation="horizontal"
                                 android:padding="3dp">
 
-                                <ImageButton
-                                    android:id="@+id/biman"
+                                <TextView
+                                    android:id="@+id/EightTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/eight" />
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="TV তে\nসংবাদ\nপ্রচার"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="20sp" />
 
                             </LinearLayout>
 

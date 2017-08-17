@@ -21,7 +21,9 @@
         <activity android:name=".ThirdActivity" />
         <activity android:name=".FourthActivity" />
         <activity android:name=".FiveActivity" />
-        <activity android:name=".SixActivity"></activity>
+        <activity android:name=".SixActivity" />
+        <activity android:name=".SevenActivity" />
+        <activity android:name=".EightActivity"></activity>
     </application>
 
 </manifest>
