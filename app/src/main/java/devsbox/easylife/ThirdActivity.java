@@ -1,22 +1,52 @@
 package devsbox.easylife;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.TextView;
 
 public class ThirdActivity extends AppCompatActivity {
 
-    EditText ed ,edzero, edone , edtwo , edthree , edfour, edfive , edsix , edseven , edeight;
+    EditText ed, edzero, edone, edtwo, edthree, edfour, edfive, edsix, edseven, edeight;
+    public final int PICK_CONTACT = 1;
+    public final int PICK_CONTACTTwo = 2;
+    public final int PICK_CONTACTThree = 3;
+    public final int PICK_CONTACTFour = 4;
+    public final int PICK_CONTACTFive = 5;
+    public final int PICK_CONTACTSix = 6;
+    public final int PICK_CONTACTSeven = 7;
+    public final int PICK_CONTACTEight = 8;
+    public final int PICK_CONTACTNine = 9;
+    public final int PICK_CONTACTTen = 10;
+
+    Button BTone, Bttwo, btthree, btfour, btfive, btsix, btseven, bteight, btnine, btten;
+    Button send;
+    TextView tvone;
+    String data_phone = "";
+    String data_phoneTwo = "";
+    String data_phonethree = "";
+    String data_phonefour = "";
+    String data_phonefive = "";
+    String data_phonesix = "";
+    String data_phoneseven = "";
+    String data_phoneeight = "";
+    String data_phonenine = "";
+    String data_phoneten = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
 
         ed = (EditText) findViewById(R.id.ThirdPhonEditText);
+        //  ed = (EditText) findViewById(R.id.ThirdPhonEditTextzero);
         edzero = (EditText) findViewById(R.id.ThirdPhonEditTextzero);
         edone = (EditText) findViewById(R.id.ThirdPhonEditTextOne);
         edtwo = (EditText) findViewById(R.id.ThirdPhonEditTextTwo);
@@ -27,12 +57,237 @@ public class ThirdActivity extends AppCompatActivity {
         edseven = (EditText) findViewById(R.id.ThirdPhonEditTextseven);
         edeight = (EditText) findViewById(R.id.ThirdPhonEditTextEight);
 
-        Button send = (Button) findViewById(R.id.ThirdSendButton);
+        send = (Button) findViewById(R.id.ThirdSendButton);
+        BTone = (Button) findViewById(R.id.ButtonOne);
+        Bttwo = (Button) findViewById(R.id.NumberButtonTwo);
+        btthree = (Button) findViewById(R.id.NumberButtonThree);
+        btfour = (Button) findViewById(R.id.NumberButtonFour);
+        btfive = (Button) findViewById(R.id.NumberButtonFive);
+        btsix = (Button) findViewById(R.id.NumberButtonSix);
+        btseven = (Button) findViewById(R.id.NumberButtonSeven);
+        bteight = (Button) findViewById(R.id.NumberButtonEight);
+        btnine = (Button) findViewById(R.id.NumberButtonNine);
+        btten = (Button) findViewById(R.id.NumberButtonTen);
 
+        //tvone = (TextView) findViewById(R.id.TVone);
+
+        BTone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_PICK, ContactsContract.CommonDataKinds.Phone.CONTENT_URI);
+                startActivityForResult(i, PICK_CONTACT);
+
+                BTone.setBackgroundColor(Color.RED);
+                ed.setVisibility(View.INVISIBLE);
+                BTone.setText("OK");
+                BTone.setTextColor(Color.BLUE);
+            }
+        });
+
+        Bttwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_PICK, ContactsContract.CommonDataKinds.Phone.CONTENT_URI);
+                startActivityForResult(i, PICK_CONTACTTwo);
+
+                Bttwo.setBackgroundColor(Color.RED);
+                edzero.setVisibility(View.INVISIBLE);
+                Bttwo.setText("OK");
+                Bttwo.setTextColor(Color.BLUE);
+            }
+        });
+
+        btthree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_PICK, ContactsContract.CommonDataKinds.Phone.CONTENT_URI);
+                startActivityForResult(i, PICK_CONTACTThree);
+
+                btthree.setBackgroundColor(Color.RED);
+                edone.setVisibility(View.INVISIBLE);
+                btthree.setText("OK");
+                btthree.setTextColor(Color.BLUE);
+            }
+        });
+
+        btfour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_PICK, ContactsContract.CommonDataKinds.Phone.CONTENT_URI);
+                startActivityForResult(i, PICK_CONTACTFour);
+
+                btfour.setBackgroundColor(Color.RED);
+                edtwo.setVisibility(View.INVISIBLE);
+                btfour.setText("OK");
+                btfour.setTextColor(Color.BLUE);
+            }
+        });
+
+        btfive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_PICK, ContactsContract.CommonDataKinds.Phone.CONTENT_URI);
+                startActivityForResult(i, PICK_CONTACTFive);
+
+                btfive.setBackgroundColor(Color.RED);
+                edthree.setVisibility(View.INVISIBLE);
+                btfive.setText("OK");
+                btfive.setTextColor(Color.BLUE);
+            }
+        });
+
+        btsix.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_PICK, ContactsContract.CommonDataKinds.Phone.CONTENT_URI);
+                startActivityForResult(i, PICK_CONTACTSix);
+
+                btsix.setBackgroundColor(Color.RED);
+                edfour.setVisibility(View.INVISIBLE);
+                btsix.setText("OK");
+                btsix.setTextColor(Color.BLUE);
+            }
+        });
+
+        btseven.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_PICK, ContactsContract.CommonDataKinds.Phone.CONTENT_URI);
+                startActivityForResult(i, PICK_CONTACTSeven);
+
+                btseven.setBackgroundColor(Color.RED);
+                edfive.setVisibility(View.INVISIBLE);
+                btseven.setText("OK");
+                btseven.setTextColor(Color.BLUE);
+            }
+        });
+
+        bteight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_PICK, ContactsContract.CommonDataKinds.Phone.CONTENT_URI);
+                startActivityForResult(i, PICK_CONTACTEight);
+
+                bteight.setBackgroundColor(Color.RED);
+                edsix.setVisibility(View.INVISIBLE);
+                bteight.setText("OK");
+                bteight.setTextColor(Color.BLUE);
+            }
+        });
+
+        btnine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_PICK, ContactsContract.CommonDataKinds.Phone.CONTENT_URI);
+                startActivityForResult(i, PICK_CONTACTNine);
+
+                btnine.setBackgroundColor(Color.RED);
+                edseven.setVisibility(View.INVISIBLE);
+                btnine.setText("OK");
+                btnine.setTextColor(Color.BLUE);
+            }
+        });
+
+        btten.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_PICK, ContactsContract.CommonDataKinds.Phone.CONTENT_URI);
+                startActivityForResult(i, PICK_CONTACTTen);
+
+                btten.setBackgroundColor(Color.RED);
+                edeight.setVisibility(View.INVISIBLE);
+                btten.setText("OK");
+                btten.setTextColor(Color.BLUE);
+            }
+        });
+
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == PICK_CONTACT && resultCode == RESULT_OK) {
+            Uri contactUri = data.getData();
+            Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
+            cursor.moveToFirst();
+            int column = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
+            //   Log.d("phone number", cursor.getString(column));
+
+           // tvone.setText(cursor.getString(column));
+           // Toast.makeText(ThirdActivity.this, cursor.getString(column), Toast.LENGTH_LONG).show();
+
+            data_phone = cursor.getString(column);
+        } else if (requestCode == PICK_CONTACTTwo && resultCode == RESULT_OK) {
+
+            Uri contactUri = data.getData();
+            Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
+            cursor.moveToFirst();
+            int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
+            data_phoneTwo = cursor.getString(columnTwo);
+        }else if (requestCode == PICK_CONTACTThree && resultCode == RESULT_OK) {
+
+            Uri contactUri = data.getData();
+            Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
+            cursor.moveToFirst();
+            int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
+            data_phonethree = cursor.getString(columnTwo);
+        }else if (requestCode == PICK_CONTACTFour && resultCode == RESULT_OK) {
+
+            Uri contactUri = data.getData();
+            Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
+            cursor.moveToFirst();
+            int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
+            data_phonefour = cursor.getString(columnTwo);
+        }else if (requestCode == PICK_CONTACTFive && resultCode == RESULT_OK) {
+
+            Uri contactUri = data.getData();
+            Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
+            cursor.moveToFirst();
+            int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
+            data_phonefive = cursor.getString(columnTwo);
+        }else if (requestCode == PICK_CONTACTSix && resultCode == RESULT_OK) {
+
+            Uri contactUri = data.getData();
+            Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
+            cursor.moveToFirst();
+            int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
+            data_phonesix = cursor.getString(columnTwo);
+        }else if (requestCode == PICK_CONTACTSeven && resultCode == RESULT_OK) {
+
+            Uri contactUri = data.getData();
+            Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
+            cursor.moveToFirst();
+            int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
+            data_phoneseven = cursor.getString(columnTwo);
+        }else if (requestCode == PICK_CONTACTEight && resultCode == RESULT_OK) {
+
+            Uri contactUri = data.getData();
+            Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
+            cursor.moveToFirst();
+            int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
+            data_phoneeight = cursor.getString(columnTwo);
+        }else if (requestCode == PICK_CONTACTNine && resultCode == RESULT_OK) {
+
+            Uri contactUri = data.getData();
+            Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
+            cursor.moveToFirst();
+            int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
+            data_phonenine = cursor.getString(columnTwo);
+        }else if (requestCode == PICK_CONTACTTen && resultCode == RESULT_OK) {
+
+            Uri contactUri = data.getData();
+            Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
+            cursor.moveToFirst();
+            int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
+            data_phoneten = cursor.getString(columnTwo);
+        }
 
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+              /*  onActivityResult( requestCode,  resultCode, null);
+                Toast.makeText(ThirdActivity.this, (cursor.getString(column)).this.onActi ,Toast.LENGTH_LONG).show();*/
 
                 String one = ed.getText().toString();
                 String two = edzero.getText().toString();
@@ -46,20 +301,29 @@ public class ThirdActivity extends AppCompatActivity {
                 String ten = edeight.getText().toString();
 
 
-                if(one.equals("")){
-                    Toast.makeText(ThirdActivity.this, "Please file-up first field", Toast.LENGTH_SHORT).show();
-                }else{
-                    Intent smsIntent = new Intent(Intent.ACTION_VIEW);
-                    smsIntent.setType("vnd.android-dir/mms-sms");
-                    smsIntent.putExtra("address", one+";"+two+";"+three+";"+four+";"+five+";"+six+";"+seven+";"+eight+";"+nine+";"+ten);
-                    smsIntent.putExtra("sms_body","র\u200D্যাপিড পিআর থেকে টিভি নিউজ ফুটেজ পেতে হলে কল করুনঃ 01730012308 অথবা 01730012309.বিকাশ নম্বর 01711425005 অথবা 01730012300(পার্সোনাল)");
-                    startActivity(smsIntent);
+                    /*if(one.equals("") || data_phone.equals("")){
+                        Toast.makeText(ThirdActivity.this, "Please file-up first field", Toast.LENGTH_SHORT).show();
+                    }else{
+                        Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+                        smsIntent.setType("vnd.android-dir/mms-sms");
+                        smsIntent.putExtra("address", one+";"+two+";"+three+";"+four+";"+five+";"+six+";"+seven+";"+eight+";"+nine+";"+ten+";"+data_phone+";"+data_phoneTwo);
+                        smsIntent.putExtra("sms_body","র\u200D্যাপিড পিআর থেকে টিভি নিউজ ফুটেজ পেতে হলে কল করুনঃ 01730012308 অথবা 01730012309.বিকাশ নম্বর 01711425005 অথবা 01730012300(পার্সোনাল)");
+                        startActivity(smsIntent);
 
-                    Toast.makeText(ThirdActivity.this, "Your Message is ready to send", Toast.LENGTH_LONG).show();
-                    finish();
-                }
+                        Toast.makeText(ThirdActivity.this, "Your Message is ready to send", Toast.LENGTH_LONG).show();
+                        finish();
+                    }*/
+
+                Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+                smsIntent.setType("vnd.android-dir/mms-sms");
+                smsIntent.putExtra("address", one + ";" + two + ";" + three + ";" + four + ";" + five + ";" + six + ";" + seven + ";" + eight + ";" + nine + ";" + ten + ";" + data_phone + ";" + data_phoneTwo
+                        + ";" + data_phonethree+ ";" + data_phonefour+ ";" + data_phonefive+ ";" + data_phonesix+ ";" + data_phoneseven+ ";" + data_phoneeight+ ";" + data_phonenine+ ";" + data_phoneten);
+                smsIntent.putExtra("sms_body", "র\u200D্যাপিড পিআর থেকে টিভি নিউজ ফুটেজ পেতে হলে কল করুনঃ 01730012308 অথবা 01730012309.বিকাশ নম্বর 01711425005 অথবা 01730012300(পার্সোনাল)");
+                startActivity(smsIntent);
 
             }
         });
+
     }
+
 }
