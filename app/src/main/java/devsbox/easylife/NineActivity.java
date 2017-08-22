@@ -4,15 +4,16 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.net.Uri;
-import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class ThirdActivity extends AppCompatActivity {
+public class NineActivity extends AppCompatActivity {
+
 
     EditText ed, edzero, edone, edtwo, edthree, edfour, edfive, edsix, edseven, edeight;
     public final int PICK_CONTACT = 1;
@@ -43,7 +44,7 @@ public class ThirdActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_third);
+        setContentView(R.layout.activity_nine);
 
         ed = (EditText) findViewById(R.id.ThirdPhonEditText);
         //  ed = (EditText) findViewById(R.id.ThirdPhonEditTextzero);
@@ -170,8 +171,6 @@ public class ThirdActivity extends AppCompatActivity {
 
             }
         });
-
-
     }
 
     @Override
@@ -371,24 +370,11 @@ public class ThirdActivity extends AppCompatActivity {
                 String ten = edeight.getText().toString();
 
 
-                    /*if(one.equals("") || data_phone.equals("")){
-                        Toast.makeText(ThirdActivity.this, "Please file-up first field", Toast.LENGTH_SHORT).show();
-                    }else{
-                        Intent smsIntent = new Intent(Intent.ACTION_VIEW);
-                        smsIntent.setType("vnd.android-dir/mms-sms");
-                        smsIntent.putExtra("address", one+";"+two+";"+three+";"+four+";"+five+";"+six+";"+seven+";"+eight+";"+nine+";"+ten+";"+data_phone+";"+data_phoneTwo);
-                        smsIntent.putExtra("sms_body","র\u200D্যাপিড পিআর থেকে টিভি নিউজ ফুটেজ পেতে হলে কল করুনঃ 01730012308 অথবা 01730012309.বিকাশ নম্বর 01711425005 অথবা 01730012300(পার্সোনাল)");
-                        startActivity(smsIntent);
-
-                        Toast.makeText(ThirdActivity.this, "Your Message is ready to send", Toast.LENGTH_LONG).show();
-                        finish();
-                    }*/
-
                 Intent smsIntent = new Intent(Intent.ACTION_VIEW);
                 smsIntent.setType("vnd.android-dir/mms-sms");
                 smsIntent.putExtra("address", one + ";" + two + ";" + three + ";" + four + ";" + five + ";" + six + ";" + seven + ";" + eight + ";" + nine + ";" + ten + ";" + data_phone + ";" + data_phoneTwo
                         + ";" + data_phonethree+ ";" + data_phonefour+ ";" + data_phonefive+ ";" + data_phonesix+ ";" + data_phoneseven+ ";" + data_phoneeight+ ";" + data_phonenine+ ";" + data_phoneten);
-                smsIntent.putExtra("sms_body", "র\u200D্যাপিড পিআর থেকে টিভি নিউজ ফুটেজ পেতে হলে কল করুনঃ 01730012308 অথবা 01730012309.বিকাশ নম্বর 01711425005 অথবা 01730012300(পার্সোনাল)");
+                smsIntent.putExtra("sms_body", "জরুরী বিষয় নিয়ে কথা বলতে চাই।ফ্রি হলে প্লিজ একটু কল দিবেন। শেখর, র\u200D্যাপিড পিআর, 01711425005");
                 startActivity(smsIntent);
 
             }

@@ -271,11 +271,16 @@
                                 android:orientation="horizontal"
                                 android:padding="3dp">
 
-                                <ImageButton
-                                    android:id="@+id/toures"
+                                <TextView
+                                    android:id="@+id/NineTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/nine" />
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="জরুরী\nপ্রয়োজনে\nCall"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="20sp" />
 
 
                             </LinearLayout>
