@@ -27,7 +27,8 @@
         <activity android:name=".SevenActivity" />
         <activity android:name=".EightActivity" />
         <activity android:name=".NineActivity" />
-        <activity android:name=".TenActivity"></activity>
+        <activity android:name=".TenActivity" />
+        <activity android:name=".ElavenActavity"></activity>
     </application>
 
 </manifest>

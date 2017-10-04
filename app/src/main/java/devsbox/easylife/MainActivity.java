@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     ImageView MyAppoinment;
-    TextView second , third , four ,five ,six,seven,eight , nine , ten;
+    TextView second , third , four ,five ,six,seven,eight , nine , ten ,elaven;
     ImageView mail, sms;
     Dialog mDialog;
 
@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         eight = (TextView) findViewById(R.id.EightTextView);
         nine = (TextView) findViewById(R.id.NineTextView);
         ten = (TextView) findViewById(R.id.TenTextView);
+        elaven = (TextView) findViewById(R.id.ElavenTextView);
 
 
         MyAppoinment.setOnClickListener(new View.OnClickListener() {
@@ -117,6 +118,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent in = new Intent(MainActivity.this,TenActivity.class);
+                startActivity(in);
+            }
+        });
+
+        elaven.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this,ElavenActavity.class);
                 startActivity(in);
             }
         });
