@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="devsbox.easylife.SecondActivity">
+    tools:context="devsbox.easylife.TwelveActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:weightSum="10">
+        android:weightSum="8">
 
 
         <LinearLayout
@@ -18,26 +18,6 @@
             android:layout_height="0dp"
             android:layout_weight="1.30"
             android:background="@drawable/top"></LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp">
-
-            <EditText
-                android:id="@+id/ThirdNameEditText"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/ractangle_dark_border"
-                android:hint="Reference Person Name"
-                android:inputType="textAutoComplete"
-                android:textAlignment="center" />
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -277,8 +257,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1.20"
-            android:gravity="center"
-            android:minHeight="30dp">
+            android:gravity="center">
 
             <Button
                 android:id="@+id/ThirdSendButton"
@@ -295,6 +274,5 @@
         </LinearLayout>
 
     </LinearLayout>
-
 
 </LinearLayout>
