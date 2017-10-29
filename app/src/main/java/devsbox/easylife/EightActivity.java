@@ -67,7 +67,7 @@ public class EightActivity extends AppCompatActivity {
                     smsIntent.setType("vnd.android-dir/mms-sms");
                     smsIntent.putExtra("address", phonedata);
                     smsIntent.putExtra("sms_body",output.toString()+ namedata + "," + " আপনার যে কোন ইভেন্ট আয়োজন ও টিভিতে সংবাদ প্রচারের জন্য যোগাযোগ করুন।\n" +
-                            " র\u200D্যাপিড পিআর:01730012300, info.rapidpr@gmail.com");
+                            " র\u200D্যাপিড পিআর:01730012307, 01730012303 \n info.rapidpr@gmail.com");
                     startActivity(smsIntent);
 
                     Toast.makeText(EightActivity.this, "Your Message is ready to send", Toast.LENGTH_LONG).show();

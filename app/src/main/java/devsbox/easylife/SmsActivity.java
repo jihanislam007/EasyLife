@@ -519,9 +519,12 @@ public class SmsActivity extends AppCompatActivity {
 
 
                     String one = "01711425005";
+                    String two = "01709955694";
+                    String three = "01730012303";
+                    String four = "01709955692";
                     Intent smsIntent = new Intent(Intent.ACTION_VIEW);
                     smsIntent.setType("vnd.android-dir/mms-sms");
-                    smsIntent.putExtra("address", one );
+                    smsIntent.putExtra("address", one+";"+two+";"+three+";"+four );
                     smsIntent.putExtra("sms_body", (
                                     subdata + "," +
                                     companydata + "," +

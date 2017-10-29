@@ -29,7 +29,8 @@
         <activity android:name=".NineActivity" />
         <activity android:name=".TenActivity" />
         <activity android:name=".ElavenActavity" />
-        <activity android:name=".TwelveActivity"></activity>
+        <activity android:name=".TwelveActivity" />
+        <activity android:name=".ThirteenActivity"></activity>
     </application>
 
 </manifest>

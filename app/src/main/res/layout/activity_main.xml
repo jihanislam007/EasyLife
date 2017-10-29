@@ -42,7 +42,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="460dp"
+                        android:layout_height="1260dp"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
@@ -57,7 +57,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:orientation="vertical"
-                            android:weightSum="4">
+                            android:weightSum="10">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -66,13 +66,18 @@
                                 android:orientation="horizontal"
                                 android:padding="3dp">
 
-                                <ImageButton
+                                <TextView
                                     android:id="@+id/MyAppoinmentTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/one" />
-                            </LinearLayout>
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="আমার এপয়েন্টমেন্ট "
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="18sp" />
 
+                            </LinearLayout>
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -86,13 +91,12 @@
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
                                     android:gravity="center"
-                                    android:text="সার্ভিসের\nজন্য\nCall, SMS, Email "
+                                    android:text="র‌্যাপিড পিআর সার্ভিস পেতে হলে"
                                     android:textAlignment="center"
                                     android:textColor="@android:color/background_dark"
-                                    android:textSize="20sp" />
+                                    android:textSize="18sp" />
 
                             </LinearLayout>
-
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -106,13 +110,12 @@
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
                                     android:gravity="center"
-                                    android:text="রিয়েল\nএস্টেট\nঅফার"
+                                    android:text="র‌্যাপিড পিআর ইভেন্ট"
                                     android:textAlignment="center"
                                     android:textColor="@android:color/background_dark"
-                                    android:textSize="20sp" />
+                                    android:textSize="18sp" />
 
                             </LinearLayout>
-
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -126,13 +129,122 @@
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
                                     android:gravity="center"
-                                    android:text="জব ইন্টারভিউ"
+                                    android:text="জব\nইন্টারভিউ"
                                     android:textAlignment="center"
                                     android:textColor="@android:color/background_dark"
-                                    android:textSize="22sp" />
+                                    android:textSize="18sp" />
 
                             </LinearLayout>
 
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:id="@+id/ThirteenTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="RPR TV\nতে\nবিজ্ঞাপন দিন"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="00"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="00"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="00"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="00"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="00"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
 
                         </LinearLayout>
 
@@ -141,7 +253,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:orientation="vertical"
-                            android:weightSum="4">
+                            android:weightSum="10">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -159,10 +271,9 @@
                                     android:text="কার্ড \nদেখে \nপ্রস্ততাব \nপ্রেরণ "
                                     android:textAlignment="center"
                                     android:textColor="@android:color/background_dark"
-                                    android:textSize="20sp" />
+                                    android:textSize="18sp" />
 
                             </LinearLayout>
-
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -176,13 +287,12 @@
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
                                     android:gravity="center"
-                                    android:text="অ্যাপ'স\nডাউনলোড\nকরুন"
+                                    android:text="র‌্যাপিড পিআর এ্যাপস ডাউনলোড করুন"
                                     android:textAlignment="center"
                                     android:textColor="@android:color/background_dark"
-                                    android:textSize="20sp" />
+                                    android:textSize="18sp" />
 
                             </LinearLayout>
-
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -196,13 +306,12 @@
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
                                     android:gravity="center"
-                                    android:text="TV তে\nসংবাদ\nপ্রচার"
+                                    android:text="TV তে\nসংবাদ\nপ্রচার করতে হলে"
                                     android:textAlignment="center"
                                     android:textColor="@android:color/background_dark"
-                                    android:textSize="20sp" />
+                                    android:textSize="18sp" />
 
                             </LinearLayout>
-
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -219,11 +328,119 @@
                                     android:text="রেফারেন্স\nএপয়েন্টমেন্ট"
                                     android:textAlignment="center"
                                     android:textColor="@android:color/background_dark"
-                                    android:textSize="20sp" />
+                                    android:textSize="18sp" />
 
 
                             </LinearLayout>
 
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="00"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="00"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="00"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="00"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="00"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
 
                         </LinearLayout>
 
@@ -232,7 +449,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:orientation="vertical"
-                            android:weightSum="4">
+                            android:weightSum="10">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -247,13 +464,12 @@
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
                                     android:gravity="center"
-                                    android:text="ফুটেজ\nপেতে\nহলে "
+                                    android:text="নিউজ ক্লিপ পেতে হলে"
                                     android:textAlignment="center"
                                     android:textColor="@android:color/background_dark"
-                                    android:textSize="20sp" />
+                                    android:textSize="18sp" />
 
                             </LinearLayout>
-
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -270,10 +486,9 @@
                                     android:text="শুভেচ্ছা\nবিনিময়"
                                     android:textAlignment="center"
                                     android:textColor="@android:color/background_dark"
-                                    android:textSize="20sp" />
+                                    android:textSize="18sp" />
 
                             </LinearLayout>
-
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -287,14 +502,13 @@
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
                                     android:gravity="center"
-                                    android:text="জরুরী\nপ্রয়োজনে\nCall"
+                                    android:text="জরুরি প্রয়োজনে কথা বলতে চাই"
                                     android:textAlignment="center"
                                     android:textColor="@android:color/background_dark"
-                                    android:textSize="20sp" />
+                                    android:textSize="18sp" />
 
 
                             </LinearLayout>
-
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -311,8 +525,117 @@
                                     android:text="বিজয় দিবস গ্র্যান্ড র‍্যালী 2017"
                                     android:textAlignment="center"
                                     android:textColor="@android:color/background_dark"
-                                    android:textSize="20sp" />
+                                    android:textSize="18sp" />
 
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="00"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="00"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="00"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="00"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="00"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="18sp" />
 
                             </LinearLayout>
 

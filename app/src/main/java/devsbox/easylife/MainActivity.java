@@ -14,8 +14,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
 
-    ImageView MyAppoinment;
-    TextView second , third , four ,five ,six,seven,eight , nine , ten ,elaven,twelve;
+    TextView MyAppoinment , second , third , four ,five ,six,seven,eight , nine , ten ,elaven,twelve , thirteen;
     ImageView mail, sms;
     Dialog mDialog;
 
@@ -27,8 +26,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        MyAppoinment = (ImageView) findViewById(R.id.MyAppoinmentTextView);
+        MyAppoinment = (TextView) findViewById(R.id.MyAppoinmentTextView);
         second = (TextView) findViewById(R.id.SecondTextView);
         third = (TextView) findViewById(R.id.ThirdTextView);
         four = (TextView) findViewById(R.id.FourTextView);
@@ -40,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         ten = (TextView) findViewById(R.id.TenTextView);
         elaven = (TextView) findViewById(R.id.ElavenTextView);
         twelve = (TextView) findViewById(R.id.twelveTextView);
+        thirteen = (TextView) findViewById(R.id.ThirteenTextView);
 
 
         MyAppoinment.setOnClickListener(new View.OnClickListener() {
@@ -135,6 +134,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent in = new Intent(MainActivity.this,TwelveActivity.class);
+                startActivity(in);
+            }
+        });
+
+        thirteen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this,ThirteenActivity.class);
                 startActivity(in);
             }
         });
