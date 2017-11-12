@@ -14,8 +14,22 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
 
-    TextView MyAppoinment , second , third , four ,five ,six,seven,eight , nine , ten ,elaven,twelve , thirteen;
-    ImageView mail, sms;
+    TextView MyAppoinment ,
+            second ,
+            third ,
+            four ,
+            five ,
+            six,
+            seven,
+            eight ,
+            nine ,
+            ten ,
+            elaven,
+            twelve ,
+            thirteen;
+
+    ImageView mail,
+            sms;
     Dialog mDialog;
 
     public int psivalue=0;

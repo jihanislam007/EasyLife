@@ -1,6 +1,8 @@
 package devsbox.easylife;
 
+import android.Manifest;
 import android.content.Intent;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +16,7 @@ public class TwelveActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_twelve);
+        takePermission();
 
         ed = (EditText) findViewById(R.id.ThirdPhonEditText);
         edzero = (EditText) findViewById(R.id.ThirdPhonEditTextzero);
@@ -61,5 +64,14 @@ public class TwelveActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void takePermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            requestPermissions(new String[]{
+                    Manifest.permission.CALL_PHONE,
+                    Manifest.permission.SEND_SMS
+            }, 1);
+        }
     }
 }
