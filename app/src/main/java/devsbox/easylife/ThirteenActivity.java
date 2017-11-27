@@ -16,6 +16,7 @@ public class ThirteenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thirteen);
+
         ed = (EditText) findViewById(R.id.ThirdPhonEditText);
         edzero = (EditText) findViewById(R.id.ThirdPhonEditTextzero);
         edone = (EditText) findViewById(R.id.ThirdPhonEditTextOne);
@@ -45,19 +46,39 @@ public class ThirteenActivity extends AppCompatActivity {
                 String nine = edseven.getText().toString();
                 String ten = edeight.getText().toString();
 
+                Intent in = getIntent();
+                final int identityValue = in.getIntExtra("identity", 0);
 
-                if(one.equals("")){
-                    Toast.makeText(ThirteenActivity.this, "Please file-up first field", Toast.LENGTH_SHORT).show();
-                }else{
-                    Intent smsIntent = new Intent(Intent.ACTION_VIEW);
-                    smsIntent.setType("vnd.android-dir/mms-sms");
-                    smsIntent.putExtra("address", one+";"+two+";"+three+";"+four+";"+five+";"+six+";"+seven+";"+eight+";"+nine+";"+ten);
-                    smsIntent.putExtra("sms_body","সারা বিশ্বব্যাপী আপনার পন্যের প্রচারের জন্য RPR TV তে বিজ্ঞাপন দিন। ৩০ সেকেন্ডের একটি বিজ্ঞাপন  ১৪৪০ বার প্রচার করতে খরচ মাত্র ২০,০০০ টাকা।\n" +
-                            "বিস্তারিত : 01730012307");
-                    startActivity(smsIntent);
+                if(identityValue==13) {
 
-                    Toast.makeText(ThirteenActivity.this, "Your Message is ready to send", Toast.LENGTH_LONG).show();
-                    finish();
+                    if (one.equals("")) {
+                        Toast.makeText(ThirteenActivity.this, "Please file-up first field", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+                        smsIntent.setType("vnd.android-dir/mms-sms");
+                        smsIntent.putExtra("address", one + ";" + two + ";" + three + ";" + four + ";" + five + ";" + six + ";" + seven + ";" + eight + ";" + nine + ";" + ten);
+                        smsIntent.putExtra("sms_body", "সারা বিশ্বব্যাপী আপনার পন্যের প্রচারের জন্য RPR TV তে বিজ্ঞাপন দিন। ৩০ সেকেন্ডের একটি বিজ্ঞাপন  ১৪৪০ বার প্রচার করতে খরচ মাত্র ২০,০০০ টাকা।\n" +
+                                "বিস্তারিত : 01730012307");
+                        startActivity(smsIntent);
+
+                        Toast.makeText(ThirteenActivity.this, "Your Message is ready to send", Toast.LENGTH_LONG).show();
+                        finish();
+                    }
+                }
+
+                else if(identityValue==14){
+                    if (one.equals("")) {
+                        Toast.makeText(ThirteenActivity.this, "Please file-up first field", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+                        smsIntent.setType("vnd.android-dir/mms-sms");
+                        smsIntent.putExtra("address", one + ";" + two + ";" + three + ";" + four + ";" + five + ";" + six + ";" + seven + ";" + eight + ";" + nine + ";" + ten);
+                        smsIntent.putExtra("sms_body", "আপনার সাথে পরিচিত হতে পেরে আমি সত্যিই আনন্দিত। আপনার সুন্দর সুস্বাস্থ্য কামনা করি।\nশুভেচ্ছান্তে, খন্দকার শহীদুল ইসলাম শেখর, ব্যবস্থাপনা পরিচালক, র\u200C্যাপিড পিআর। 01730012300, info.rapidpr@gmail.com");
+                        startActivity(smsIntent);
+
+                        Toast.makeText(ThirteenActivity.this, "Your Message is ready to send", Toast.LENGTH_LONG).show();
+                        finish();
+                    }
                 }
 
             }

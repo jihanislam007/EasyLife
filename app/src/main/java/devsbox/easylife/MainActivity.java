@@ -14,7 +14,8 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
 
-    TextView MyAppoinment , second , third , four ,five ,six,seven,eight , nine , ten ,elaven,twelve , thirteen;
+    TextView MyAppoinment , second , third , four ,five ,six,seven,eight , nine , ten ,elaven,twelve , thirteen,
+            fourteen;
     ImageView mail, sms;
     Dialog mDialog;
 
@@ -37,8 +38,9 @@ public class MainActivity extends AppCompatActivity {
         nine = (TextView) findViewById(R.id.NineTextView);
         ten = (TextView) findViewById(R.id.TenTextView);
         elaven = (TextView) findViewById(R.id.ElavenTextView);
-        twelve = (TextView) findViewById(R.id.twelveTextView);
+   //     twelve = (TextView) findViewById(R.id.twelveTextView);
         thirteen = (TextView) findViewById(R.id.ThirteenTextView);
+        fourteen = (TextView) findViewById(R.id.FourteenTextView);
 
 
         MyAppoinment.setOnClickListener(new View.OnClickListener() {
@@ -130,18 +132,30 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        twelve.setOnClickListener(new View.OnClickListener() {
+        /*twelve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent in = new Intent(MainActivity.this,TwelveActivity.class);
                 startActivity(in);
             }
-        });
+        });*/
 
         thirteen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent in = new Intent(MainActivity.this,ThirteenActivity.class);
+                int identity = 13;
+                in.putExtra("identity", identity);
+                startActivity(in);
+            }
+        });
+
+        fourteen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this,ThirteenActivity.class);
+                int identity = 14;
+                in.putExtra("identity", identity);
                 startActivity(in);
             }
         });

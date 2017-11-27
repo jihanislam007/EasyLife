@@ -341,11 +341,12 @@
                                 android:padding="3dp">
 
                                 <TextView
+                                    android:id="@+id/FourteenTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
                                     android:gravity="center"
-                                    android:text=""
+                                    android:text="পরিচিত\nহয়ে\nআনন্দিত"
                                     android:textAlignment="center"
                                     android:textColor="@android:color/background_dark"
                                     android:textSize="18sp" />
@@ -514,9 +515,10 @@
                                 android:layout_height="0dp"
                                 android:layout_weight="1"
                                 android:orientation="horizontal"
-                                android:padding="3dp">
+                                android:layout_margin="3dp"
+                                android:background="@drawable/ractangle_dark_border">
 
-                                <TextView
+                                <!--<TextView
                                     android:id="@+id/twelveTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
@@ -525,7 +527,7 @@
                                     android:text="বিজয় দিবস গ্র্যান্ড র‍্যালী 2017"
                                     android:textAlignment="center"
                                     android:textColor="@android:color/background_dark"
-                                    android:textSize="18sp" />
+                                    android:textSize="18sp" />-->
 
 
                             </LinearLayout>
