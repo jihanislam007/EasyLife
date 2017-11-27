@@ -511,8 +511,6 @@ public class SmsActivity extends AppCompatActivity {
                     output.append(", METTING @ CLIENT");
                 }
 
-                //     Toast.makeText(getApplicationContext(),output.toString(),Toast.LENGTH_LONG).show();
-
                 if (subdata.equals("") || companydata.equals("") || placedata.equals("")) {
                     Toast.makeText(getApplicationContext(), " Please file up your data", Toast.LENGTH_LONG).show();
                 } else {
