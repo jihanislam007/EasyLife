@@ -1,9 +1,11 @@
 package devsbox.easylife;
 
+import android.Manifest;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
@@ -44,6 +46,7 @@ public class SixActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_six);
+        takePermission();
 
         check_one = (CheckBox) findViewById(R.id.ActionCheckBoxOne);
         check_two = (CheckBox) findViewById(R.id.ActionCheckBoxTwo);
@@ -409,6 +412,17 @@ public class SixActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void takePermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            requestPermissions(new String[]{
+                    /*Manifest.permission.READ_EXTERNAL_STORAGE,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE,*/
+                    Manifest.permission.CALL_PHONE,
+                    Manifest.permission.SEND_SMS
+            }, 1);
+        }
     }
 
 }

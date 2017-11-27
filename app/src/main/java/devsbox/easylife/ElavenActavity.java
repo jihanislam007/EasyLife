@@ -1,6 +1,8 @@
 package devsbox.easylife;
 
+import android.Manifest;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -16,6 +18,7 @@ public class ElavenActavity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_elaven_actavity);
+        takePermission();
 
 
         name = (EditText) findViewById(R.id.ThirdNameEditText);
@@ -72,5 +75,15 @@ public class ElavenActavity extends AppCompatActivity {
 
             }
         });
+    }
+    private void takePermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            requestPermissions(new String[]{
+                    /*Manifest.permission.READ_EXTERNAL_STORAGE,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE,*/
+                    Manifest.permission.CALL_PHONE,
+                    Manifest.permission.SEND_SMS
+            }, 1);
+        }
     }
 }
