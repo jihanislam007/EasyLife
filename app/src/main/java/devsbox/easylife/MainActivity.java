@@ -14,12 +14,15 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
 
-    TextView MyAppoinment , second , third , four ,five ,six,seven,eight , nine , ten ,elaven,twelve , thirteen,
-            fourteen;
+    TextView MyAppoinment, second, third, four, five, six, seven, eight, nine, ten,
+            elaven, twelve, thirteen,fourteen, fifteen, sixteen, seventeen,
+            eighteen, nineteen, twenty, twentyOne, twentytwo, twentythree,
+            twentyfour, twentyfive, twentysix;
+
     ImageView mail, sms;
     Dialog mDialog;
 
-    public int psivalue=0;
+    public int psivalue = 0;
     SharedPreferences shared;
 
     @Override
@@ -38,9 +41,22 @@ public class MainActivity extends AppCompatActivity {
         nine = (TextView) findViewById(R.id.NineTextView);
         ten = (TextView) findViewById(R.id.TenTextView);
         elaven = (TextView) findViewById(R.id.ElavenTextView);
-   //     twelve = (TextView) findViewById(R.id.twelveTextView);
+        twelve = (TextView) findViewById(R.id.twelveTextView);
         thirteen = (TextView) findViewById(R.id.ThirteenTextView);
         fourteen = (TextView) findViewById(R.id.FourteenTextView);
+        fifteen = (TextView) findViewById(R.id.FifteenTextView);
+
+        sixteen = (TextView) findViewById(R.id.SixteenTextView);
+        seventeen = (TextView) findViewById(R.id.SeventeenTextView);
+        eighteen = (TextView) findViewById(R.id.EighteenTextView);
+        nineteen = (TextView) findViewById(R.id.NineteenTextView);
+        twenty = (TextView) findViewById(R.id.TwentyTextView);
+        twentyOne = (TextView) findViewById(R.id.TwentyOneTextView);
+        twentytwo = (TextView) findViewById(R.id.twentyTwoTextView);
+        twentythree = (TextView) findViewById(R.id.TwentyThreeTextView);
+        twentyfour = (TextView) findViewById(R.id.TwentyFourTextView);
+        twentyfive = (TextView) findViewById(R.id.TwentyFiveTextView);
+        twentysix = (TextView) findViewById(R.id.TwentySixTextView);
 
 
         MyAppoinment.setOnClickListener(new View.OnClickListener() {
@@ -55,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         second.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(MainActivity.this,SecondActivity.class);
+                Intent in = new Intent(MainActivity.this, SecondActivity.class);
                 startActivity(in);
             }
         });
@@ -63,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         third.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(MainActivity.this,ThirdActivity.class);
+                Intent in = new Intent(MainActivity.this, ThirdActivity.class);
                 startActivity(in);
             }
         });
@@ -71,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         four.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(MainActivity.this,FourthActivity.class);
+                Intent in = new Intent(MainActivity.this, FourthActivity.class);
                 startActivity(in);
             }
         });
@@ -79,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         five.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(MainActivity.this,FiveActivity.class);
+                Intent in = new Intent(MainActivity.this, FiveActivity.class);
                 startActivity(in);
             }
         });
@@ -87,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         six.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(MainActivity.this,SixActivity.class);
+                Intent in = new Intent(MainActivity.this, SixActivity.class);
                 startActivity(in);
             }
         });
@@ -95,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
         seven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(MainActivity.this,SevenActivity.class);
+                Intent in = new Intent(MainActivity.this, SevenActivity.class);
                 startActivity(in);
             }
         });
@@ -103,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
         eight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(MainActivity.this,EightActivity.class);
+                Intent in = new Intent(MainActivity.this, EightActivity.class);
                 startActivity(in);
             }
         });
@@ -111,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
         nine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(MainActivity.this,NineActivity.class);
+                Intent in = new Intent(MainActivity.this, NineActivity.class);
                 startActivity(in);
             }
         });
@@ -119,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
         ten.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(MainActivity.this,TenActivity.class);
+                Intent in = new Intent(MainActivity.this, TenActivity.class);
                 startActivity(in);
             }
         });
@@ -127,23 +143,26 @@ public class MainActivity extends AppCompatActivity {
         elaven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(MainActivity.this,ElavenActavity.class);
+                Intent in = new Intent(MainActivity.this, ElavenActavity.class);
                 startActivity(in);
             }
         });
 
-        /*twelve.setOnClickListener(new View.OnClickListener() {
+        twelve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(MainActivity.this,TwelveActivity.class);
+                Intent in = new Intent(MainActivity.this, ThirteenTo26Activity.class);
+                int identity = 12;
+                in.putExtra("identity", identity);
                 startActivity(in);
             }
-        });*/
+        });
 
         thirteen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(MainActivity.this,ThirteenActivity.class);
+
+                Intent in = new Intent(MainActivity.this, ThirteenTo26Activity.class);
                 int identity = 13;
                 in.putExtra("identity", identity);
                 startActivity(in);
@@ -153,12 +172,134 @@ public class MainActivity extends AppCompatActivity {
         fourteen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(MainActivity.this,ThirteenActivity.class);
+                Intent in = new Intent(MainActivity.this, ThirteenTo26Activity.class);
                 int identity = 14;
                 in.putExtra("identity", identity);
                 startActivity(in);
             }
         });
+
+        fifteen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this, ThirteenTo26Activity.class);
+                int identity = 15;
+                in.putExtra("identity", identity);
+                startActivity(in);
+            }
+        });
+
+        sixteen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this, ThirteenTo26Activity.class);
+                int identity = 16;
+                in.putExtra("identity", identity);
+                startActivity(in);
+            }
+        });
+
+        seventeen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this, ThirteenTo26Activity.class);
+                int identity = 17;
+                in.putExtra("identity", identity);
+                startActivity(in);
+            }
+        });
+
+        eighteen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this, ThirteenTo26Activity.class);
+                int identity = 18;
+                in.putExtra("identity", identity);
+                startActivity(in);
+            }
+        });
+
+        nineteen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this, ThirteenTo26Activity.class);
+                int identity = 19;
+                in.putExtra("identity", identity);
+                startActivity(in);
+            }
+        });
+
+        twenty.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this, ThirteenTo26Activity.class);
+                int identity = 20;
+                in.putExtra("identity", identity);
+                startActivity(in);
+            }
+        });
+
+        twentyOne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this, ThirteenTo26Activity.class);
+                int identity = 21;
+                in.putExtra("identity", identity);
+                startActivity(in);
+            }
+        });
+
+        twentytwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this, ThirteenTo26Activity.class);
+                int identity = 22;
+                in.putExtra("identity", identity);
+                startActivity(in);
+            }
+        });
+
+        twentythree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this, ThirteenTo26Activity.class);
+                int identity = 23;
+                in.putExtra("identity", identity);
+                startActivity(in);
+            }
+        });
+
+        twentyfour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this, ThirteenTo26Activity.class);
+                int identity = 24;
+                in.putExtra("identity", identity);
+                startActivity(in);
+            }
+        });
+
+        twentyfive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this, ThirteenTo26Activity.class);
+                int identity = 25;
+                in.putExtra("identity", identity);
+                startActivity(in);
+            }
+        });
+
+        twentysix.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this, ThirteenTo26Activity.class);
+                int identity = 26;
+                in.putExtra("identity", identity);
+                startActivity(in);
+            }
+        });
+
+
     }
 
     public void pop() {
@@ -180,13 +321,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 ////////////SharedPreferences///////////////
-                psivalue = psivalue+1;
+                psivalue = psivalue + 1;
                 editor.putInt("psi", psivalue);
                 editor.commit(); // commit it when you are done.
 
-                Intent in = new Intent(MainActivity.this , SmsActivity.class);
-              //  int int_value = 1;
-                in.putExtra("mail_or_sms",1);
+                Intent in = new Intent(MainActivity.this, SmsActivity.class);
+                //  int int_value = 1;
+                in.putExtra("mail_or_sms", 1);
                 startActivity(in);
             }
         });
@@ -196,12 +337,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 ////////////SharedPreferences///////////////
-                psivalue = psivalue+1;
+                psivalue = psivalue + 1;
                 editor.putInt("psi", psivalue);
                 editor.commit(); // commit it when you are done.
 
-                Intent in = new Intent(MainActivity.this , SmsActivity.class);
-                in.putExtra("mail_or_sms",2);
+                Intent in = new Intent(MainActivity.this, SmsActivity.class);
+                in.putExtra("mail_or_sms", 2);
                 startActivity(in);
             }
         });

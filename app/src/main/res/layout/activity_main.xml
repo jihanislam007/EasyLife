@@ -78,6 +78,7 @@
                                     android:textSize="18sp" />
 
                             </LinearLayout>
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -97,6 +98,7 @@
                                     android:textSize="18sp" />
 
                             </LinearLayout>
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -116,6 +118,7 @@
                                     android:textSize="18sp" />
 
                             </LinearLayout>
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -149,12 +152,13 @@
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
                                     android:gravity="center"
-                                    android:text="RPR TV\nতে\nবিজ্ঞাপন দিন"
+                                    android:text="পরিচিত\nহয়ে\nআনন্দিত"
                                     android:textAlignment="center"
                                     android:textColor="@android:color/background_dark"
                                     android:textSize="18sp" />
 
                             </LinearLayout>
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -163,16 +167,18 @@
                                 android:padding="3dp">
 
                                 <TextView
+                                    android:id="@+id/SixteenTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
                                     android:gravity="center"
-                                    android:text="00"
+                                    android:text="16\nRPR TV-তে বিজ্ঞাপন দিন"
                                     android:textAlignment="center"
                                     android:textColor="@android:color/background_dark"
                                     android:textSize="18sp" />
 
                             </LinearLayout>
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -181,16 +187,18 @@
                                 android:padding="3dp">
 
                                 <TextView
+                                    android:id="@+id/NineteenTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
                                     android:gravity="center"
-                                    android:text="00"
+                                    android:text="19\nওয়েব সাইট তৈরি"
                                     android:textAlignment="center"
                                     android:textColor="@android:color/background_dark"
                                     android:textSize="18sp" />
 
                             </LinearLayout>
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -199,16 +207,18 @@
                                 android:padding="3dp">
 
                                 <TextView
+                                    android:id="@+id/twentyTwoTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
                                     android:gravity="center"
-                                    android:text="00"
+                                    android:text="22\nডকুমেন্টারী নির্মাণ"
                                     android:textAlignment="center"
                                     android:textColor="@android:color/background_dark"
                                     android:textSize="18sp" />
 
                             </LinearLayout>
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -217,16 +227,18 @@
                                 android:padding="3dp">
 
                                 <TextView
+                                    android:id="@+id/TwentyFiveTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
                                     android:gravity="center"
-                                    android:text="00"
+                                    android:text="25\nরপ্তানী পণ্য"
                                     android:textAlignment="center"
                                     android:textColor="@android:color/background_dark"
                                     android:textSize="18sp" />
 
                             </LinearLayout>
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -274,6 +286,7 @@
                                     android:textSize="18sp" />
 
                             </LinearLayout>
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -293,6 +306,7 @@
                                     android:textSize="18sp" />
 
                             </LinearLayout>
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -312,6 +326,7 @@
                                     android:textSize="18sp" />
 
                             </LinearLayout>
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -346,12 +361,13 @@
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
                                     android:gravity="center"
-                                    android:text="পরিচিত\nহয়ে\nআনন্দিত"
+                                    android:text="14\nটিভিসি\nরিপোর্ট"
                                     android:textAlignment="center"
                                     android:textColor="@android:color/background_dark"
                                     android:textSize="18sp" />
 
                             </LinearLayout>
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -360,16 +376,18 @@
                                 android:padding="3dp">
 
                                 <TextView
+                                    android:id="@+id/SeventeenTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
                                     android:gravity="center"
-                                    android:text="00"
+                                    android:text="17\nকালচারাল ইভেন্ট"
                                     android:textAlignment="center"
                                     android:textColor="@android:color/background_dark"
                                     android:textSize="18sp" />
 
                             </LinearLayout>
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -378,16 +396,18 @@
                                 android:padding="3dp">
 
                                 <TextView
+                                    android:id="@+id/TwentyTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
                                     android:gravity="center"
-                                    android:text="00"
+                                    android:text="20\nনিজস্ব অ্যাপস তৈরি"
                                     android:textAlignment="center"
                                     android:textColor="@android:color/background_dark"
                                     android:textSize="18sp" />
 
                             </LinearLayout>
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -396,16 +416,18 @@
                                 android:padding="3dp">
 
                                 <TextView
+                                    android:id="@+id/TwentyThreeTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
                                     android:gravity="center"
-                                    android:text="00"
+                                    android:text="23\nএজিএম কনফারেন্স"
                                     android:textAlignment="center"
                                     android:textColor="@android:color/background_dark"
                                     android:textSize="18sp" />
 
                             </LinearLayout>
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -414,29 +436,12 @@
                                 android:padding="3dp">
 
                                 <TextView
+                                    android:id="@+id/TwentySixTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
                                     android:gravity="center"
-                                    android:text="00"
-                                    android:textAlignment="center"
-                                    android:textColor="@android:color/background_dark"
-                                    android:textSize="18sp" />
-
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="1"
-                                android:orientation="horizontal"
-                                android:padding="3dp">
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/ractangle_dark_border"
-                                    android:gravity="center"
-                                    android:text="00"
+                                    android:text="26\nগিফট প্রেরণ"
                                     android:textAlignment="center"
                                     android:textColor="@android:color/background_dark"
                                     android:textSize="18sp" />
@@ -471,6 +476,7 @@
                                     android:textSize="18sp" />
 
                             </LinearLayout>
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -490,6 +496,7 @@
                                     android:textSize="18sp" />
 
                             </LinearLayout>
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -510,25 +517,53 @@
 
 
                             </LinearLayout>
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
-                                android:layout_weight="1"
-                                android:orientation="horizontal"
                                 android:layout_margin="3dp"
-                                android:background="@drawable/ractangle_dark_border">
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
 
-                                <!--<TextView
-                                    android:id="@+id/twelveTextView"
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+                                    android:padding="3dp">
+
+                                    <TextView
+                                        android:id="@+id/twelveTextView"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/ractangle_dark_border"
+                                        android:gravity="center"
+                                        android:text="RPR TV\nতে\nবিজ্ঞাপন দিন"
+                                        android:textAlignment="center"
+                                        android:textColor="@android:color/background_dark"
+                                        android:textSize="18sp" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:id="@+id/FifteenTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
                                     android:gravity="center"
-                                    android:text="বিজয় দিবস গ্র্যান্ড র‍্যালী 2017"
+                                    android:text="15\nE-MAIL ও SMS মার্কেটিং"
                                     android:textAlignment="center"
                                     android:textColor="@android:color/background_dark"
-                                    android:textSize="18sp" />-->
-
+                                    android:textSize="18sp" />
 
                             </LinearLayout>
 
@@ -540,16 +575,58 @@
                                 android:padding="3dp">
 
                                 <TextView
+                                    android:id="@+id/EighteenTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
                                     android:gravity="center"
-                                    android:text=""
+                                    android:text="18\nপ্রথম মিডিয়া আর্কাইভ"
                                     android:textAlignment="center"
                                     android:textColor="@android:color/background_dark"
                                     android:textSize="18sp" />
 
                             </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:id="@+id/TwentyOneTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="21\nকর্পোরেট প্রিন্টিং"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:id="@+id/TwentyFourTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/ractangle_dark_border"
+                                    android:gravity="center"
+                                    android:text="24\nপ্রোডাক্ট প্রমোশন"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/background_dark"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -568,60 +645,7 @@
                                     android:textSize="18sp" />
 
                             </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="1"
-                                android:orientation="horizontal"
-                                android:padding="3dp">
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/ractangle_dark_border"
-                                    android:gravity="center"
-                                    android:text="00"
-                                    android:textAlignment="center"
-                                    android:textColor="@android:color/background_dark"
-                                    android:textSize="18sp" />
-
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="1"
-                                android:orientation="horizontal"
-                                android:padding="3dp">
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/ractangle_dark_border"
-                                    android:gravity="center"
-                                    android:text="00"
-                                    android:textAlignment="center"
-                                    android:textColor="@android:color/background_dark"
-                                    android:textSize="18sp" />
-
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="1"
-                                android:orientation="horizontal"
-                                android:padding="3dp">
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/ractangle_dark_border"
-                                    android:gravity="center"
-                                    android:text="00"
-                                    android:textAlignment="center"
-                                    android:textColor="@android:color/background_dark"
-                                    android:textSize="18sp" />
-
-                            </LinearLayout>
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
