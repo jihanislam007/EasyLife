@@ -2,6 +2,7 @@ package devsbox.easylife;
 
 import android.Manifest;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -52,9 +53,14 @@ public class FourthActivity extends AppCompatActivity {
                 if(one.equals("")){
                     Toast.makeText(FourthActivity.this, "Please file-up first field", Toast.LENGTH_SHORT).show();
                 }else{
-                    Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+                    /*Intent smsIntent = new Intent(Intent.ACTION_VIEW);
                     smsIntent.setType("vnd.android-dir/mms-sms");
                     smsIntent.putExtra("address", one+";"+two+";"+three+";"+four+";"+five+";"+six+";"+seven+";"+eight+";"+nine+";"+ten);
+                    smsIntent.putExtra("sms_body","ইভেন্ট ম্যানেজমেন্ট, মিডিয়া কাভারেজ, মিডিয়া সাপোর্ট, লজিস্টিক সাপোর্ট, EMAIL ও SMS মার্কেটিং। র\u200D্যাপিড পিআর :01730012300, SMS করুন 01711425005 EMAIL করুনঃ info.rapidpr@gmail.com");
+                    startActivity(smsIntent);*/
+
+                    Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
+                    smsIntent.setData(Uri.parse("smsto:" + Uri.encode(one + ";" + two + ";" + three + ";" + four + ";" + five + ";" + six + ";" + seven + ";" + eight + ";" + nine + ";" + ten)));
                     smsIntent.putExtra("sms_body","ইভেন্ট ম্যানেজমেন্ট, মিডিয়া কাভারেজ, মিডিয়া সাপোর্ট, লজিস্টিক সাপোর্ট, EMAIL ও SMS মার্কেটিং। র\u200D্যাপিড পিআর :01730012300, SMS করুন 01711425005 EMAIL করুনঃ info.rapidpr@gmail.com");
                     startActivity(smsIntent);
 

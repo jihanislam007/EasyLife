@@ -2,6 +2,7 @@ package devsbox.easylife;
 
 import android.Manifest;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -56,7 +57,7 @@ public class ElavenActavity extends AppCompatActivity {
                 if(one.equals("")){
                     Toast.makeText(ElavenActavity.this, "Please file-up first field", Toast.LENGTH_SHORT).show();
                 }else{
-                    Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+                    /*Intent smsIntent = new Intent(Intent.ACTION_VIEW);
                     smsIntent.setType("vnd.android-dir/mms-sms");
                     smsIntent.putExtra("address", one+";"+two+";"+three+";"+four+";"+five+";"+six+";"+seven+";"+eight+";"+nine+";"+ten);
                     smsIntent.putExtra("sms_body","Dear Sir,\n" +
@@ -67,7 +68,18 @@ public class ElavenActavity extends AppCompatActivity {
                             "Cell: 01730012300.\n" +
                             "Mail: info.rapidpr@gmail.com.\n" +
                             "www.rapidpr-bd.com");
-                    startActivity(smsIntent);
+                    startActivity(smsIntent);*/
+
+                    Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
+                    smsIntent.setData(Uri.parse("smsto:" + Uri.encode(one + ";" + two + ";" + three + ";" + four + ";" + five + ";" + six + ";" + seven + ";" + eight + ";" + nine + ";" + ten)));
+                    smsIntent.putExtra("sms_body","Dear Sir,\n" +
+                            "I am Khondoker Shahidul Islam Shakhor, Managing Director, Rapid PR.  I want to meet with you in reference of "+namedata+".\n" +
+                            "Please give me an appointment.\n" +
+                            "Regards.\n" +
+                            "Shakhor.\n" +
+                            "Cell: 01730012300.\n" +
+                            "Mail: info.rapidpr@gmail.com.\n" +
+                            "www.rapidpr-bd.com");startActivity(smsIntent);
 
                     Toast.makeText(ElavenActavity.this, "Your Message is ready to send", Toast.LENGTH_LONG).show();
                     finish();

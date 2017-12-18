@@ -373,11 +373,19 @@ public class NineActivity extends AppCompatActivity {
                 String ten = edeight.getText().toString();
 
 
-                Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+                /*Intent smsIntent = new Intent(Intent.ACTION_VIEW);
                 smsIntent.setType("vnd.android-dir/mms-sms");
                 smsIntent.putExtra("address", one + ";" + two + ";" + three + ";" + four + ";" + five + ";" + six + ";" + seven + ";" + eight + ";" + nine + ";" + ten + ";" + data_phone + ";" + data_phoneTwo
                         + ";" + data_phonethree+ ";" + data_phonefour+ ";" + data_phonefive+ ";" + data_phonesix+ ";" + data_phoneseven+ ";" + data_phoneeight+ ";" + data_phonenine+ ";" + data_phoneten);
                 smsIntent.putExtra("sms_body", "জরুরী বিষয় নিয়ে কথা বলতে চাই।ফ্রি হলে প্লিজ একটু কল দিবেন। শেখর, র\u200D্যাপিড পিআর, 01711425005");
+                startActivity(smsIntent);*/
+
+                Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
+                smsIntent.setData(Uri.parse("smsto:" + Uri.encode(one + ";" + two + ";" + three + ";" + four + ";" + five + ";" + six + ";" + seven + ";" + eight + ";" + nine + ";" + ten + ";" + data_phone + ";" + data_phoneTwo
+                        + ";" + data_phonethree+ ";" + data_phonefour+ ";" + data_phonefive+ ";" + data_phonesix+ ";" + data_phoneseven+ ";" + data_phoneeight+ ";" + data_phonenine+ ";" + data_phoneten)));
+                smsIntent.putExtra("sms_body","বিজয় দিবস গ্র্যান্ড র\u200D্যালী-২০১৭ অনলাইন রেজিস্ট্রেশন করতে নিচের লিঙ্ক-এ ক্লিক করুন ।\n" +
+                        "https://goo.gl/sU8ay3\n" +
+                        "বিস্তারিত জানতেঃ 01730012303, 01730012307");
                 startActivity(smsIntent);
 
             }

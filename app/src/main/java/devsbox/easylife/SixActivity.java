@@ -398,10 +398,17 @@ public class SixActivity extends AppCompatActivity {
                 }
 
 
-                Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+                /*Intent smsIntent = new Intent(Intent.ACTION_VIEW);
                 smsIntent.setType("vnd.android-dir/mms-sms");
                 smsIntent.putExtra("address", one+";"+two+";"+three+";"+four+";"+five+";"+six+";"+seven+";"+eight+";"+nine+";"+ten+ ";" + data_phone + ";" + data_phoneTwo
                         + ";" + data_phonethree+ ";" + data_phonefour+ ";" + data_phonefive+ ";" + data_phonesix+ ";" + data_phoneseven+ ";" + data_phoneeight+ ";" + data_phonenine+ ";" + data_phoneten);
+                smsIntent.putExtra("sms_body","শুভ হোক আপনার প্রতিটি দিন। আনন্দ ঝলমল হোক প্রতিটি মুহূর্ত। এই শুভ কামনায় RAPID PR এর পক্ষ থেকে "+output.toString()  +
+                        "\nখন্দকার শহীদুল ইসলাম শেখর,01730012300,info.rapidpr@gmail.com");
+                startActivity(smsIntent);*/
+
+                Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
+                smsIntent.setData(Uri.parse("smsto:" + Uri.encode(one+";"+two+";"+three+";"+four+";"+five+";"+six+";"+seven+";"+eight+";"+nine+";"+ten+ ";" + data_phone + ";" + data_phoneTwo
+                        + ";" + data_phonethree+ ";" + data_phonefour+ ";" + data_phonefive+ ";" + data_phonesix+ ";" + data_phoneseven+ ";" + data_phoneeight+ ";" + data_phonenine+ ";" + data_phoneten)));
                 smsIntent.putExtra("sms_body","শুভ হোক আপনার প্রতিটি দিন। আনন্দ ঝলমল হোক প্রতিটি মুহূর্ত। এই শুভ কামনায় RAPID PR এর পক্ষ থেকে "+output.toString()  +
                         "\nখন্দকার শহীদুল ইসলাম শেখর,01730012300,info.rapidpr@gmail.com");
                 startActivity(smsIntent);

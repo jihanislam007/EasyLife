@@ -2,6 +2,7 @@ package devsbox.easylife;
 
 import android.Manifest;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -53,9 +54,14 @@ public class SevenActivity extends AppCompatActivity {
                 if(one.equals("")){
                     Toast.makeText(SevenActivity.this, "Please file-up first field", Toast.LENGTH_SHORT).show();
                 }else{
-                    Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+                    /*Intent smsIntent = new Intent(Intent.ACTION_VIEW);
                     smsIntent.setType("vnd.android-dir/mms-sms");
                     smsIntent.putExtra("address", one+";"+two+";"+three+";"+four+";"+five+";"+six+";"+seven+";"+eight+";"+nine+";"+ten);
+                    smsIntent.putExtra("sms_body","দেশের যে কোন ভেন্যুতে যে কোন ধরনের ইভেন্ট সফলভাবে আয়োজনের জন্য র\u200C্যাপিড পিআর ।\n01730012307\n01709955694\n01709955692 \n info.rapidpr@gmail.com");
+                    startActivity(smsIntent);*/
+
+                    Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
+                    smsIntent.setData(Uri.parse("smsto:" + Uri.encode(one + ";" + two + ";" + three + ";" + four + ";" + five + ";" + six + ";" + seven + ";" + eight + ";" + nine + ";" + ten)));
                     smsIntent.putExtra("sms_body","দেশের যে কোন ভেন্যুতে যে কোন ধরনের ইভেন্ট সফলভাবে আয়োজনের জন্য র\u200C্যাপিড পিআর ।\n01730012307\n01709955694\n01709955692 \n info.rapidpr@gmail.com");
                     startActivity(smsIntent);
 

@@ -2,6 +2,7 @@ package devsbox.easylife;
 
 import android.Manifest;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -66,8 +67,14 @@ public class EightActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), " Please file up your data", Toast.LENGTH_LONG).show();
                 } else {
                     //
-                    Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+                    /*Intent smsIntent = new Intent(Intent.ACTION_VIEW);
                     smsIntent.setType("vnd.android-dir/mms-sms");
+                    smsIntent.putExtra("address", phonedata);
+                    smsIntent.putExtra("sms_body",output.toString()+ namedata + "," + " আপনার যে কোন ইভেন্ট আয়োজন ও টিভিতে সংবাদ প্রচারের জন্য যোগাযোগ করুন।\n" +
+                            " র\u200D্যাপিড পিআর:01730012307, 01730012303 \n info.rapidpr@gmail.com");
+                    startActivity(smsIntent);*/
+
+                    Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
                     smsIntent.putExtra("address", phonedata);
                     smsIntent.putExtra("sms_body",output.toString()+ namedata + "," + " আপনার যে কোন ইভেন্ট আয়োজন ও টিভিতে সংবাদ প্রচারের জন্য যোগাযোগ করুন।\n" +
                             " র\u200D্যাপিড পিআর:01730012307, 01730012303 \n info.rapidpr@gmail.com");

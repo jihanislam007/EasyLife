@@ -387,10 +387,16 @@ public class ThirdActivity extends AppCompatActivity {
                         finish();
                     }*/
 
-                Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+                /*Intent smsIntent = new Intent(Intent.ACTION_VIEW);
                 smsIntent.setType("vnd.android-dir/mms-sms");
                 smsIntent.putExtra("address", one + ";" + two + ";" + three + ";" + four + ";" + five + ";" + six + ";" + seven + ";" + eight + ";" + nine + ";" + ten + ";" + data_phone + ";" + data_phoneTwo
                         + ";" + data_phonethree+ ";" + data_phonefour+ ";" + data_phonefive+ ";" + data_phonesix+ ";" + data_phoneseven+ ";" + data_phoneeight+ ";" + data_phonenine+ ";" + data_phoneten);
+                smsIntent.putExtra("sms_body", "র\u200D্যাপিড পিআর থেকে টিভি নিউজ ফুটেজ পেতে হলে কল করুনঃ 01730012308 অথবা 01730012309.বিকাশ নম্বর 01711425005 অথবা 01730012300(পার্সোনাল)");
+                startActivity(smsIntent);*/
+
+                Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
+                smsIntent.setData(Uri.parse("smsto:" + Uri.encode(one + ";" + two + ";" + three + ";" + four + ";" + five + ";" + six + ";" + seven + ";" + eight + ";" + nine + ";" + ten + ";" + data_phone + ";" + data_phoneTwo
+                        + ";" + data_phonethree+ ";" + data_phonefour+ ";" + data_phonefive+ ";" + data_phonesix+ ";" + data_phoneseven+ ";" + data_phoneeight+ ";" + data_phonenine+ ";" + data_phoneten)));
                 smsIntent.putExtra("sms_body", "র\u200D্যাপিড পিআর থেকে টিভি নিউজ ফুটেজ পেতে হলে কল করুনঃ 01730012308 অথবা 01730012309.বিকাশ নম্বর 01711425005 অথবা 01730012300(পার্সোনাল)");
                 startActivity(smsIntent);
 

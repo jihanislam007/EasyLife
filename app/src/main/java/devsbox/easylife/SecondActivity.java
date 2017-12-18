@@ -2,6 +2,7 @@ package devsbox.easylife;
 
 import android.Manifest;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -72,9 +73,15 @@ public class SecondActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), " Please file up your data", Toast.LENGTH_LONG).show();
                 } else {
                     //
-                    Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+                    /*Intent smsIntent = new Intent(Intent.ACTION_VIEW);
                     smsIntent.setType("vnd.android-dir/mms-sms");
                     smsIntent.putExtra("address", phonedata);
+                    smsIntent.putExtra("sms_body",output.toString()+ namedata + "," + " Rapid PR is first Digital Media archive & Event Management firm in Bangladesh. To increase your business promotion, any event or any media support please feel free to contact with us. " +
+                            "\nRegards. Shahidul Islam Shakhor. \n01730012300, \ninfo.rapidpr@gmail.com, \nwww.rapidpr-bd.com");
+                    startActivity(smsIntent);*/
+
+                    Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
+                    smsIntent.setData(Uri.parse("smsto:" + Uri.encode( phonedata)));
                     smsIntent.putExtra("sms_body",output.toString()+ namedata + "," + " Rapid PR is first Digital Media archive & Event Management firm in Bangladesh. To increase your business promotion, any event or any media support please feel free to contact with us. " +
                             "\nRegards. Shahidul Islam Shakhor. \n01730012300, \ninfo.rapidpr@gmail.com, \nwww.rapidpr-bd.com");
                     startActivity(smsIntent);

@@ -2,6 +2,7 @@ package devsbox.easylife;
 
 import android.Manifest;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -90,9 +91,15 @@ public class TenActivity extends AppCompatActivity {
                 if(one.equals("")){
                     Toast.makeText(TenActivity.this, "Please file-up first field", Toast.LENGTH_SHORT).show();
                 }else{
-                    Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+                    /*Intent smsIntent = new Intent(Intent.ACTION_VIEW);
                     smsIntent.setType("vnd.android-dir/mms-sms");
                     smsIntent.putExtra("address", one+";"+two+";"+three+";"+four+";"+five+";"+six+";"+seven+";"+eight+";"+nine+";"+ten);
+                    smsIntent.putExtra("sms_body","আগামী "+ dayy + "-" + monthh + "-" + yearr +"ইং তারিখে"+output.toString()+" র\u200C্যাপিড পিআর এ আপনার জব ইন্টারভিউ ।" +
+                            "সম্পূর্ণ সিভি , ছবি ও সার্টিফিকেট সাথে নিয়ে আসবেন । বিস্তারিত : 01730012307");
+                    startActivity(smsIntent);*/
+
+                    Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
+                    smsIntent.setData(Uri.parse("smsto:" + Uri.encode(one + ";" + two + ";" + three + ";" + four + ";" + five + ";" + six + ";" + seven + ";" + eight + ";" + nine + ";" + ten)));
                     smsIntent.putExtra("sms_body","আগামী "+ dayy + "-" + monthh + "-" + yearr +"ইং তারিখে"+output.toString()+" র\u200C্যাপিড পিআর এ আপনার জব ইন্টারভিউ ।" +
                             "সম্পূর্ণ সিভি , ছবি ও সার্টিফিকেট সাথে নিয়ে আসবেন । বিস্তারিত : 01730012307");
                     startActivity(smsIntent);
