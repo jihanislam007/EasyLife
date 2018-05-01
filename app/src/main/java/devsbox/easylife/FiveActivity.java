@@ -12,7 +12,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class FiveActivity extends AppCompatActivity {
-    EditText ed ,edzero, edone , edtwo , edthree , edfour, edfive , edsix , edseven , edeight;
+    EditText ed, edzero, edone, edtwo, edthree, edfour, edfive, edsix, edseven, edeight;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,9 +50,9 @@ public class FiveActivity extends AppCompatActivity {
                 String ten = edeight.getText().toString();
 
 
-                if(one.equals("")){
+                if (one.equals("")) {
                     Toast.makeText(FiveActivity.this, "Please file-up first field", Toast.LENGTH_SHORT).show();
-                }else{
+                } else {
                     /*Intent smsIntent = new Intent(Intent.ACTION_VIEW);
                     smsIntent.setType("vnd.android-dir/mms-sms");
                     smsIntent.putExtra("address", one+";"+two+";"+three+";"+four+";"+five+";"+six+";"+seven+";"+eight+";"+nine+";"+ten);
@@ -61,7 +62,7 @@ public class FiveActivity extends AppCompatActivity {
 
                     Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
                     smsIntent.setData(Uri.parse("smsto:" + Uri.encode(one + ";" + two + ";" + three + ";" + four + ";" + five + ";" + six + ";" + seven + ";" + eight + ";" + nine + ";" + ten)));
-                    smsIntent.putExtra("sms_body","র\u200D্যাপিড পিআর সার্ভিস দ্রুত পেতে গুগল প্লেষ্টোর থেকে RAPID PR SERVICES এ্যাপস ইনষ্টল করুন।র\u200D্যাপিড পিআর:01730012300, info.rapidpr@gmail.com, PLEASE SEND YOUR ALL QUERY BY SMS\n" +
+                    smsIntent.putExtra("sms_body", "র\u200D্যাপিড পিআর সার্ভিস দ্রুত পেতে গুগল প্লেষ্টোর থেকে RAPID PR SERVICES এ্যাপস ইনষ্টল করুন।র\u200D্যাপিড পিআর:01730012300, info.rapidpr@gmail.com, PLEASE SEND YOUR ALL QUERY BY SMS\n" +
                             "TO:01730012300");
                     startActivity(smsIntent);
 
@@ -72,6 +73,7 @@ public class FiveActivity extends AppCompatActivity {
             }
         });
     }
+
     private void takePermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             requestPermissions(new String[]{

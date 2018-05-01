@@ -47,7 +47,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:orientation="vertical"
-                    android:weightSum="12">
+                    android:weightSum="14.5">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -103,7 +103,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1">
+                        android:layout_weight="3.5">
 
                         <CalendarView
                             android:id="@+id/calenderView"
@@ -181,6 +181,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="5"
+                        android:layout_marginTop="8dp"
                         android:background="@drawable/ractangle_dark_border">
 
                         <LinearLayout
@@ -196,6 +197,7 @@
                                 android:layout_marginTop="10dp"
                                 android:text="MASTER PROPOSAL"
                                 android:textSize="18sp"></CheckBox>
+
                             <CheckBox
                                 android:id="@+id/ActionCheckBoxTwo"
                                 android:layout_width="match_parent"
@@ -203,6 +205,7 @@
                                 android:layout_marginTop="15dp"
                                 android:text="PORTAL PROPOSAL"
                                 android:textSize="18sp"></CheckBox>
+
                             <CheckBox
                                 android:id="@+id/ActionCheckBoxThree"
                                 android:layout_width="match_parent"
@@ -218,6 +221,7 @@
                                 android:layout_marginTop="10dp"
                                 android:text="EVENT PROPOSAL"
                                 android:textSize="18sp"></CheckBox>
+
                             <CheckBox
                                 android:id="@+id/ActionCheckBoxFive"
                                 android:layout_width="match_parent"
@@ -234,6 +238,7 @@
                                 android:layout_marginTop="10dp"
                                 android:text="DOCUMENTARY PRO"
                                 android:textSize="18sp"></CheckBox>
+
                             <CheckBox
                                 android:id="@+id/ActionCheckBoxSeven"
                                 android:layout_width="match_parent"
@@ -241,6 +246,7 @@
                                 android:layout_marginTop="15dp"
                                 android:text="VDO STILL PROPOSAL"
                                 android:textSize="18sp"></CheckBox>
+
                             <CheckBox
                                 android:id="@+id/ActionCheckBoxEight"
                                 android:layout_width="match_parent"
@@ -256,6 +262,7 @@
                                 android:layout_marginTop="15dp"
                                 android:text="POWER POINT SEND"
                                 android:textSize="18sp"></CheckBox>
+
                             <CheckBox
                                 android:id="@+id/ActionCheckBoxTen"
                                 android:layout_width="match_parent"
@@ -271,6 +278,7 @@
                                 android:layout_marginTop="15dp"
                                 android:text="EVENT QT"
                                 android:textSize="18sp"></CheckBox>
+
                             <CheckBox
                                 android:id="@+id/ActionCheckBoxTewelv"
                                 android:layout_width="match_parent"
@@ -286,6 +294,7 @@
                                 android:layout_marginTop="15dp"
                                 android:text="MEETING @ RAPID PR"
                                 android:textSize="18sp"></CheckBox>
+
                             <CheckBox
                                 android:id="@+id/ActionCheckBoxFourteen"
                                 android:layout_width="match_parent"
@@ -302,7 +311,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="1">
+                        android:layout_weight="1"
+                        android:layout_marginTop="8dp">
 
                         <EditText
                             android:id="@+id/OtherActionEditText"
@@ -310,7 +320,7 @@
                             android:layout_height="70dp"
                             android:hint="Other Action"
                             android:background="@drawable/ractangle_dark_border"
-                            android:textAlignment="center"/>
+                            android:textAlignment="center" />
 
                     </LinearLayout>
 
@@ -332,6 +342,7 @@
                             android:textSize="24sp"></Button>
 
                     </LinearLayout>
+
                 </LinearLayout>
             </ScrollView>
         </LinearLayout>

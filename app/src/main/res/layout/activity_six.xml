@@ -33,6 +33,7 @@
                 android:layout_marginTop="10dp"
                 android:text="নববর্ষের শুভেচ্ছা"
                 android:textSize="18sp"></CheckBox>
+
             <CheckBox
                 android:id="@+id/ActionCheckBoxTwo"
                 android:layout_width="match_parent"
@@ -40,6 +41,7 @@
                 android:layout_marginTop="15dp"
                 android:text="ঈদ মোবারক"
                 android:textSize="18sp"></CheckBox>
+
             <CheckBox
                 android:id="@+id/ActionCheckBoxThree"
                 android:layout_width="match_parent"
@@ -55,6 +57,7 @@
                 android:layout_marginTop="10dp"
                 android:text="শুভ জন্মদিন"
                 android:textSize="18sp"></CheckBox>
+
             <CheckBox
                 android:id="@+id/ActionCheckBoxFive"
                 android:layout_width="match_parent"
@@ -107,7 +110,6 @@
                                 android:background="@drawable/ractangle_dark_border" />
 
 
-
                         </LinearLayout>
 
                         <LinearLayout
@@ -121,10 +123,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:text=". . . "
-                                android:background="@drawable/ractangle_dark_border"/>
+                                android:background="@drawable/ractangle_dark_border" />
 
                         </LinearLayout>
-
 
 
                     </LinearLayout>
@@ -174,10 +175,9 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
-                                    android:text=". . ."/>
+                                    android:text=". . ." />
 
                             </LinearLayout>
-
 
 
                         </LinearLayout>
@@ -221,10 +221,9 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
-                                    android:text=". . ."/>
+                                    android:text=". . ." />
 
                             </LinearLayout>
-
 
 
                         </LinearLayout>
@@ -267,7 +266,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
-                                    android:text=". . ."/>
+                                    android:text=". . ." />
 
                             </LinearLayout>
 
@@ -312,7 +311,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
-                                    android:text=". . ."/>
+                                    android:text=". . ." />
 
                             </LinearLayout>
 
@@ -357,7 +356,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
-                                    android:text=". . ."/>
+                                    android:text=". . ." />
 
                             </LinearLayout>
 
@@ -401,10 +400,9 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
-                                    android:text=". . ."/>
+                                    android:text=". . ." />
 
                             </LinearLayout>
-
 
 
                         </LinearLayout>
@@ -446,10 +444,9 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
-                                    android:text=". . ."/>
+                                    android:text=". . ." />
 
                             </LinearLayout>
-
 
 
                         </LinearLayout>
@@ -460,7 +457,6 @@
                             android:layout_marginLeft="15dp"
                             android:layout_marginRight="15dp"
                             android:layout_weight="1">
-
 
 
                             <LinearLayout
@@ -493,10 +489,9 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
-                                    android:text=". . ."/>
+                                    android:text=". . ." />
 
                             </LinearLayout>
-
 
 
                         </LinearLayout>
@@ -539,10 +534,9 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@drawable/ractangle_dark_border"
-                                    android:text=". . ."/>
+                                    android:text=". . ." />
 
                             </LinearLayout>
-
 
 
                         </LinearLayout>

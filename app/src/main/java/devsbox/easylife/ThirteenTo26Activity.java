@@ -344,6 +344,19 @@ public class ThirteenTo26Activity extends AppCompatActivity {
                         finish();
                     }
 
+                } else if (identityValue == 28) {
+                    if (one.equals("")) {
+                        Toast.makeText(ThirteenTo26Activity.this, "Please file-up first field", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Intent intent = new Intent(Intent.ACTION_SENDTO);
+                        intent.setData(Uri.parse("smsto:" + Uri.encode(one + ";" + two + ";" + three + ";" + four + ";" + five + ";" + six + ";" + seven + ";" + eight + ";" + nine + ";" + ten)));
+                        intent.putExtra("sms_body", "নতুন অথবা পুরাতন বেচে দিন যখন তখন।র\u200C্যাপিড সেবা - +8801975012300 ,+8801976012300\nwww.rapidseba.com");
+                        startActivity(intent);
+
+                        Toast.makeText(ThirteenTo26Activity.this, "Your Message is ready to send", Toast.LENGTH_LONG).show();
+                        finish();
+                    }
+
                     /*Intent intent = new Intent(Intent.ACTION_SENDTO);
                     intent.setData(Uri.parse("smsto:" + Uri.encode(one + ";" + two + ";" + three + ";" + four + ";" + five + ";" + six + ";" + seven + ";" + eight + ";" + nine + ";" + ten)));
                     intent.putExtra("sms_body", "সালাম নিবেন। র\u200C্যাপিড পিআর থেকে আপনার জন্য উপহার হিসাবে একটি ডায়েরি পাঠাতে চাই। বিস্তারিত ঠিকানা SMS করার অনুরোধ করছি। \n" +

@@ -18,7 +18,7 @@ public class TenActivity extends AppCompatActivity {
 
     CalendarView calender;
     CheckBox check_one, check_two;
-    EditText ed ,edzero, edone , edtwo , edthree , edfour, edfive , edsix , edseven , edeight;
+    EditText ed, edzero, edone, edtwo, edthree, edfour, edfive, edsix, edseven, edeight;
     Button sendsms;
 
     int dayy;
@@ -60,7 +60,6 @@ public class TenActivity extends AppCompatActivity {
         });
 
 
-
         sendsms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,9 +87,9 @@ public class TenActivity extends AppCompatActivity {
                 }
 
 
-                if(one.equals("")){
+                if (one.equals("")) {
                     Toast.makeText(TenActivity.this, "Please file-up first field", Toast.LENGTH_SHORT).show();
-                }else{
+                } else {
                     /*Intent smsIntent = new Intent(Intent.ACTION_VIEW);
                     smsIntent.setType("vnd.android-dir/mms-sms");
                     smsIntent.putExtra("address", one+";"+two+";"+three+";"+four+";"+five+";"+six+";"+seven+";"+eight+";"+nine+";"+ten);
@@ -100,7 +99,7 @@ public class TenActivity extends AppCompatActivity {
 
                     Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
                     smsIntent.setData(Uri.parse("smsto:" + Uri.encode(one + ";" + two + ";" + three + ";" + four + ";" + five + ";" + six + ";" + seven + ";" + eight + ";" + nine + ";" + ten)));
-                    smsIntent.putExtra("sms_body","আগামী "+ dayy + "-" + monthh + "-" + yearr +"ইং তারিখে"+output.toString()+" র\u200C্যাপিড পিআর এ আপনার জব ইন্টারভিউ ।" +
+                    smsIntent.putExtra("sms_body", "আগামী " + dayy + "-" + monthh + "-" + yearr + "ইং তারিখে" + output.toString() + " র\u200C্যাপিড পিআর এ আপনার জব ইন্টারভিউ ।" +
                             "সম্পূর্ণ সিভি , ছবি ও সার্টিফিকেট সাথে নিয়ে আসবেন । বিস্তারিত : 01730012307");
                     startActivity(smsIntent);
 

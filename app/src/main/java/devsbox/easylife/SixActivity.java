@@ -18,7 +18,7 @@ import android.widget.Toast;
 public class SixActivity extends AppCompatActivity {
 
     CheckBox check_one, check_two, check_three, check_four, check_five;
-    EditText ed ,edzero, edone , edtwo , edthree , edfour, edfive , edsix , edseven , edeight;
+    EditText ed, edzero, edone, edtwo, edthree, edfour, edfive, edsix, edseven, edeight;
     public final int PICK_CONTACT = 1;
     public final int PICK_CONTACTTwo = 2;
     public final int PICK_CONTACTThree = 3;
@@ -42,6 +42,7 @@ public class SixActivity extends AppCompatActivity {
     String data_phoneeight = "";
     String data_phonenine = "";
     String data_phoneten = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -182,6 +183,7 @@ public class SixActivity extends AppCompatActivity {
 
 
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == PICK_CONTACT && resultCode == RESULT_OK) {
@@ -192,9 +194,9 @@ public class SixActivity extends AppCompatActivity {
 
             data_phone = cursor.getString(column);
 
-            if(data_phone.isEmpty()){
+            if (data_phone.isEmpty()) {
                 //do nothing
-            }else{
+            } else {
                 BTone.setBackgroundColor(Color.RED);
                 ed.setVisibility(View.INVISIBLE);
                 BTone.setText("OK");
@@ -209,16 +211,16 @@ public class SixActivity extends AppCompatActivity {
             int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
             data_phoneTwo = cursor.getString(columnTwo);
 
-            if(data_phoneTwo.isEmpty()){
+            if (data_phoneTwo.isEmpty()) {
                 //do nothing
-            }else{
+            } else {
                 Bttwo.setBackgroundColor(Color.RED);
                 edzero.setVisibility(View.INVISIBLE);
                 Bttwo.setText("OK");
                 Bttwo.setTextColor(Color.BLUE);
             }
 
-        }else if (requestCode == PICK_CONTACTThree && resultCode == RESULT_OK) {
+        } else if (requestCode == PICK_CONTACTThree && resultCode == RESULT_OK) {
 
             Uri contactUri = data.getData();
             Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
@@ -226,16 +228,16 @@ public class SixActivity extends AppCompatActivity {
             int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
             data_phonethree = cursor.getString(columnTwo);
 
-            if(data_phonethree.isEmpty()){
+            if (data_phonethree.isEmpty()) {
                 //do nothing
-            }else{
+            } else {
                 btthree.setBackgroundColor(Color.RED);
                 edone.setVisibility(View.INVISIBLE);
                 btthree.setText("OK");
                 btthree.setTextColor(Color.BLUE);
             }
 
-        }else if (requestCode == PICK_CONTACTFour && resultCode == RESULT_OK) {
+        } else if (requestCode == PICK_CONTACTFour && resultCode == RESULT_OK) {
 
             Uri contactUri = data.getData();
             Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
@@ -243,9 +245,9 @@ public class SixActivity extends AppCompatActivity {
             int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
             data_phonefour = cursor.getString(columnTwo);
 
-            if(data_phonefour.isEmpty()){
+            if (data_phonefour.isEmpty()) {
                 //do nothing
-            }else{
+            } else {
                 btfour.setBackgroundColor(Color.RED);
                 edtwo.setVisibility(View.INVISIBLE);
                 btfour.setText("OK");
@@ -253,7 +255,7 @@ public class SixActivity extends AppCompatActivity {
             }
 
 
-        }else if (requestCode == PICK_CONTACTFive && resultCode == RESULT_OK) {
+        } else if (requestCode == PICK_CONTACTFive && resultCode == RESULT_OK) {
 
             Uri contactUri = data.getData();
             Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
@@ -261,9 +263,9 @@ public class SixActivity extends AppCompatActivity {
             int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
             data_phonefive = cursor.getString(columnTwo);
 
-            if(data_phonefive.isEmpty()){
+            if (data_phonefive.isEmpty()) {
                 //do nothing
-            }else{
+            } else {
                 btfive.setBackgroundColor(Color.RED);
                 edthree.setVisibility(View.INVISIBLE);
                 btfive.setText("OK");
@@ -271,7 +273,7 @@ public class SixActivity extends AppCompatActivity {
             }
 
 
-        }else if (requestCode == PICK_CONTACTSix && resultCode == RESULT_OK) {
+        } else if (requestCode == PICK_CONTACTSix && resultCode == RESULT_OK) {
 
             Uri contactUri = data.getData();
             Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
@@ -279,9 +281,9 @@ public class SixActivity extends AppCompatActivity {
             int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
             data_phonesix = cursor.getString(columnTwo);
 
-            if(data_phonesix.isEmpty()){
+            if (data_phonesix.isEmpty()) {
                 //do nothing
-            }else{
+            } else {
                 btsix.setBackgroundColor(Color.RED);
                 edfour.setVisibility(View.INVISIBLE);
                 btsix.setText("OK");
@@ -289,7 +291,7 @@ public class SixActivity extends AppCompatActivity {
             }
 
 
-        }else if (requestCode == PICK_CONTACTSeven && resultCode == RESULT_OK) {
+        } else if (requestCode == PICK_CONTACTSeven && resultCode == RESULT_OK) {
 
             Uri contactUri = data.getData();
             Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
@@ -297,9 +299,9 @@ public class SixActivity extends AppCompatActivity {
             int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
             data_phoneseven = cursor.getString(columnTwo);
 
-            if(data_phoneseven.isEmpty()){
+            if (data_phoneseven.isEmpty()) {
                 //do nothing
-            }else{
+            } else {
                 btseven.setBackgroundColor(Color.RED);
                 edfive.setVisibility(View.INVISIBLE);
                 btseven.setText("OK");
@@ -307,7 +309,7 @@ public class SixActivity extends AppCompatActivity {
             }
 
 
-        }else if (requestCode == PICK_CONTACTEight && resultCode == RESULT_OK) {
+        } else if (requestCode == PICK_CONTACTEight && resultCode == RESULT_OK) {
 
             Uri contactUri = data.getData();
             Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
@@ -315,16 +317,16 @@ public class SixActivity extends AppCompatActivity {
             int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
             data_phoneeight = cursor.getString(columnTwo);
 
-            if(data_phoneeight.isEmpty()){
+            if (data_phoneeight.isEmpty()) {
                 //do nothing
-            }else{
+            } else {
                 bteight.setBackgroundColor(Color.RED);
                 edsix.setVisibility(View.INVISIBLE);
                 bteight.setText("OK");
                 bteight.setTextColor(Color.BLUE);
             }
 
-        }else if (requestCode == PICK_CONTACTNine && resultCode == RESULT_OK) {
+        } else if (requestCode == PICK_CONTACTNine && resultCode == RESULT_OK) {
 
             Uri contactUri = data.getData();
             Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
@@ -332,16 +334,16 @@ public class SixActivity extends AppCompatActivity {
             int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
             data_phonenine = cursor.getString(columnTwo);
 
-            if(data_phonenine.isEmpty()){
+            if (data_phonenine.isEmpty()) {
                 //do nothing
-            }else{
+            } else {
                 btnine.setBackgroundColor(Color.RED);
                 edseven.setVisibility(View.INVISIBLE);
                 btnine.setText("OK");
                 btnine.setTextColor(Color.BLUE);
             }
 
-        }else if (requestCode == PICK_CONTACTTen && resultCode == RESULT_OK) {
+        } else if (requestCode == PICK_CONTACTTen && resultCode == RESULT_OK) {
 
             Uri contactUri = data.getData();
             Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
@@ -349,9 +351,9 @@ public class SixActivity extends AppCompatActivity {
             int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
             data_phoneten = cursor.getString(columnTwo);
 
-            if(data_phoneten.isEmpty()){
+            if (data_phoneten.isEmpty()) {
                 //do nothing
-            }else{
+            } else {
                 btten.setBackgroundColor(Color.RED);
                 edeight.setVisibility(View.INVISIBLE);
                 btten.setText("OK");
@@ -383,17 +385,13 @@ public class SixActivity extends AppCompatActivity {
 
                 if (check_one.isChecked()) {
                     output.append("নববর্ষের শুভেচ্ছা ।");
-                }
-                else if (check_two.isChecked()) {
+                } else if (check_two.isChecked()) {
                     output.append("ঈদ মোবারক ।");
-                }
-                else if (check_three.isChecked()) {
+                } else if (check_three.isChecked()) {
                     output.append("শারদীয় শুভেচ্ছা ।");
-                }
-                else if (check_four.isChecked()) {
+                } else if (check_four.isChecked()) {
                     output.append("শুভ জন্মদিন ।");
-                }
-                else if (check_five.isChecked()) {
+                } else if (check_five.isChecked()) {
                     output.append("শুভ বিবাহ বার্ষিকী ।");
                 }
 
@@ -407,9 +405,9 @@ public class SixActivity extends AppCompatActivity {
                 startActivity(smsIntent);*/
 
                 Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
-                smsIntent.setData(Uri.parse("smsto:" + Uri.encode(one+";"+two+";"+three+";"+four+";"+five+";"+six+";"+seven+";"+eight+";"+nine+";"+ten+ ";" + data_phone + ";" + data_phoneTwo
-                        + ";" + data_phonethree+ ";" + data_phonefour+ ";" + data_phonefive+ ";" + data_phonesix+ ";" + data_phoneseven+ ";" + data_phoneeight+ ";" + data_phonenine+ ";" + data_phoneten)));
-                smsIntent.putExtra("sms_body","শুভ হোক আপনার প্রতিটি দিন। আনন্দ ঝলমল হোক প্রতিটি মুহূর্ত। এই শুভ কামনায় RAPID PR এর পক্ষ থেকে "+output.toString()  +
+                smsIntent.setData(Uri.parse("smsto:" + Uri.encode(one + ";" + two + ";" + three + ";" + four + ";" + five + ";" + six + ";" + seven + ";" + eight + ";" + nine + ";" + ten + ";" + data_phone + ";" + data_phoneTwo
+                        + ";" + data_phonethree + ";" + data_phonefour + ";" + data_phonefive + ";" + data_phonesix + ";" + data_phoneseven + ";" + data_phoneeight + ";" + data_phonenine + ";" + data_phoneten)));
+                smsIntent.putExtra("sms_body", "শুভ হোক আপনার প্রতিটি দিন। আনন্দ ঝলমল হোক প্রতিটি মুহূর্ত। এই শুভ কামনায় RAPID PR এর পক্ষ থেকে " + output.toString() +
                         "\nখন্দকার শহীদুল ইসলাম শেখর,01730012300,info.rapidpr@gmail.com");
                 startActivity(smsIntent);
 

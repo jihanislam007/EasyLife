@@ -186,9 +186,9 @@ public class NineActivity extends AppCompatActivity {
 
             data_phone = cursor.getString(column);
 
-            if(data_phone.isEmpty()){
+            if (data_phone.isEmpty()) {
                 //do nothing
-            }else{
+            } else {
                 BTone.setBackgroundColor(Color.RED);
                 ed.setVisibility(View.INVISIBLE);
                 BTone.setText("OK");
@@ -203,16 +203,16 @@ public class NineActivity extends AppCompatActivity {
             int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
             data_phoneTwo = cursor.getString(columnTwo);
 
-            if(data_phoneTwo.isEmpty()){
+            if (data_phoneTwo.isEmpty()) {
                 //do nothing
-            }else{
+            } else {
                 Bttwo.setBackgroundColor(Color.RED);
                 edzero.setVisibility(View.INVISIBLE);
                 Bttwo.setText("OK");
                 Bttwo.setTextColor(Color.BLUE);
             }
 
-        }else if (requestCode == PICK_CONTACTThree && resultCode == RESULT_OK) {
+        } else if (requestCode == PICK_CONTACTThree && resultCode == RESULT_OK) {
 
             Uri contactUri = data.getData();
             Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
@@ -220,16 +220,16 @@ public class NineActivity extends AppCompatActivity {
             int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
             data_phonethree = cursor.getString(columnTwo);
 
-            if(data_phonethree.isEmpty()){
+            if (data_phonethree.isEmpty()) {
                 //do nothing
-            }else{
+            } else {
                 btthree.setBackgroundColor(Color.RED);
                 edone.setVisibility(View.INVISIBLE);
                 btthree.setText("OK");
                 btthree.setTextColor(Color.BLUE);
             }
 
-        }else if (requestCode == PICK_CONTACTFour && resultCode == RESULT_OK) {
+        } else if (requestCode == PICK_CONTACTFour && resultCode == RESULT_OK) {
 
             Uri contactUri = data.getData();
             Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
@@ -237,9 +237,9 @@ public class NineActivity extends AppCompatActivity {
             int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
             data_phonefour = cursor.getString(columnTwo);
 
-            if(data_phonefour.isEmpty()){
+            if (data_phonefour.isEmpty()) {
                 //do nothing
-            }else{
+            } else {
                 btfour.setBackgroundColor(Color.RED);
                 edtwo.setVisibility(View.INVISIBLE);
                 btfour.setText("OK");
@@ -247,7 +247,7 @@ public class NineActivity extends AppCompatActivity {
             }
 
 
-        }else if (requestCode == PICK_CONTACTFive && resultCode == RESULT_OK) {
+        } else if (requestCode == PICK_CONTACTFive && resultCode == RESULT_OK) {
 
             Uri contactUri = data.getData();
             Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
@@ -255,9 +255,9 @@ public class NineActivity extends AppCompatActivity {
             int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
             data_phonefive = cursor.getString(columnTwo);
 
-            if(data_phonefive.isEmpty()){
+            if (data_phonefive.isEmpty()) {
                 //do nothing
-            }else{
+            } else {
                 btfive.setBackgroundColor(Color.RED);
                 edthree.setVisibility(View.INVISIBLE);
                 btfive.setText("OK");
@@ -265,7 +265,7 @@ public class NineActivity extends AppCompatActivity {
             }
 
 
-        }else if (requestCode == PICK_CONTACTSix && resultCode == RESULT_OK) {
+        } else if (requestCode == PICK_CONTACTSix && resultCode == RESULT_OK) {
 
             Uri contactUri = data.getData();
             Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
@@ -273,9 +273,9 @@ public class NineActivity extends AppCompatActivity {
             int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
             data_phonesix = cursor.getString(columnTwo);
 
-            if(data_phonesix.isEmpty()){
+            if (data_phonesix.isEmpty()) {
                 //do nothing
-            }else{
+            } else {
                 btsix.setBackgroundColor(Color.RED);
                 edfour.setVisibility(View.INVISIBLE);
                 btsix.setText("OK");
@@ -283,7 +283,7 @@ public class NineActivity extends AppCompatActivity {
             }
 
 
-        }else if (requestCode == PICK_CONTACTSeven && resultCode == RESULT_OK) {
+        } else if (requestCode == PICK_CONTACTSeven && resultCode == RESULT_OK) {
 
             Uri contactUri = data.getData();
             Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
@@ -291,9 +291,9 @@ public class NineActivity extends AppCompatActivity {
             int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
             data_phoneseven = cursor.getString(columnTwo);
 
-            if(data_phoneseven.isEmpty()){
+            if (data_phoneseven.isEmpty()) {
                 //do nothing
-            }else{
+            } else {
                 btseven.setBackgroundColor(Color.RED);
                 edfive.setVisibility(View.INVISIBLE);
                 btseven.setText("OK");
@@ -301,7 +301,7 @@ public class NineActivity extends AppCompatActivity {
             }
 
 
-        }else if (requestCode == PICK_CONTACTEight && resultCode == RESULT_OK) {
+        } else if (requestCode == PICK_CONTACTEight && resultCode == RESULT_OK) {
 
             Uri contactUri = data.getData();
             Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
@@ -309,16 +309,16 @@ public class NineActivity extends AppCompatActivity {
             int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
             data_phoneeight = cursor.getString(columnTwo);
 
-            if(data_phoneeight.isEmpty()){
+            if (data_phoneeight.isEmpty()) {
                 //do nothing
-            }else{
+            } else {
                 bteight.setBackgroundColor(Color.RED);
                 edsix.setVisibility(View.INVISIBLE);
                 bteight.setText("OK");
                 bteight.setTextColor(Color.BLUE);
             }
 
-        }else if (requestCode == PICK_CONTACTNine && resultCode == RESULT_OK) {
+        } else if (requestCode == PICK_CONTACTNine && resultCode == RESULT_OK) {
 
             Uri contactUri = data.getData();
             Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
@@ -326,16 +326,16 @@ public class NineActivity extends AppCompatActivity {
             int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
             data_phonenine = cursor.getString(columnTwo);
 
-            if(data_phonenine.isEmpty()){
+            if (data_phonenine.isEmpty()) {
                 //do nothing
-            }else{
+            } else {
                 btnine.setBackgroundColor(Color.RED);
                 edseven.setVisibility(View.INVISIBLE);
                 btnine.setText("OK");
                 btnine.setTextColor(Color.BLUE);
             }
 
-        }else if (requestCode == PICK_CONTACTTen && resultCode == RESULT_OK) {
+        } else if (requestCode == PICK_CONTACTTen && resultCode == RESULT_OK) {
 
             Uri contactUri = data.getData();
             Cursor cursor = getContentResolver().query(contactUri, null, null, null, null);
@@ -343,9 +343,9 @@ public class NineActivity extends AppCompatActivity {
             int columnTwo = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
             data_phoneten = cursor.getString(columnTwo);
 
-            if(data_phoneten.isEmpty()){
+            if (data_phoneten.isEmpty()) {
                 //do nothing
-            }else{
+            } else {
                 btten.setBackgroundColor(Color.RED);
                 edeight.setVisibility(View.INVISIBLE);
                 btten.setText("OK");
@@ -382,8 +382,8 @@ public class NineActivity extends AppCompatActivity {
 
                 Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
                 smsIntent.setData(Uri.parse("smsto:" + Uri.encode(one + ";" + two + ";" + three + ";" + four + ";" + five + ";" + six + ";" + seven + ";" + eight + ";" + nine + ";" + ten + ";" + data_phone + ";" + data_phoneTwo
-                        + ";" + data_phonethree+ ";" + data_phonefour+ ";" + data_phonefive+ ";" + data_phonesix+ ";" + data_phoneseven+ ";" + data_phoneeight+ ";" + data_phonenine+ ";" + data_phoneten)));
-                smsIntent.putExtra("sms_body","বিজয় দিবস গ্র্যান্ড র\u200D্যালী-২০১৭ অনলাইন রেজিস্ট্রেশন করতে নিচের লিঙ্ক-এ ক্লিক করুন ।\n" +
+                        + ";" + data_phonethree + ";" + data_phonefour + ";" + data_phonefive + ";" + data_phonesix + ";" + data_phoneseven + ";" + data_phoneeight + ";" + data_phonenine + ";" + data_phoneten)));
+                smsIntent.putExtra("sms_body", "বিজয় দিবস গ্র্যান্ড র\u200D্যালী-২০১৭ অনলাইন রেজিস্ট্রেশন করতে নিচের লিঙ্ক-এ ক্লিক করুন ।\n" +
                         "https://goo.gl/sU8ay3\n" +
                         "বিস্তারিত জানতেঃ 01730012303, 01730012307");
                 startActivity(smsIntent);
@@ -392,6 +392,7 @@ public class NineActivity extends AppCompatActivity {
         });
 
     }
+
     private void takePermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             requestPermissions(new String[]{

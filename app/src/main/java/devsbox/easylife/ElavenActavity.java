@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class ElavenActavity extends AppCompatActivity {
 
-    EditText name,ed ,edzero, edone , edtwo , edthree , edfour, edfive , edsix , edseven , edeight;
+    EditText name, ed, edzero, edone, edtwo, edthree, edfour, edfive, edsix, edseven, edeight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,9 +54,9 @@ public class ElavenActavity extends AppCompatActivity {
                 String ten = edeight.getText().toString();
 
 
-                if(one.equals("")){
+                if (one.equals("")) {
                     Toast.makeText(ElavenActavity.this, "Please file-up first field", Toast.LENGTH_SHORT).show();
-                }else{
+                } else {
                     /*Intent smsIntent = new Intent(Intent.ACTION_VIEW);
                     smsIntent.setType("vnd.android-dir/mms-sms");
                     smsIntent.putExtra("address", one+";"+two+";"+three+";"+four+";"+five+";"+six+";"+seven+";"+eight+";"+nine+";"+ten);
@@ -72,14 +72,15 @@ public class ElavenActavity extends AppCompatActivity {
 
                     Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
                     smsIntent.setData(Uri.parse("smsto:" + Uri.encode(one + ";" + two + ";" + three + ";" + four + ";" + five + ";" + six + ";" + seven + ";" + eight + ";" + nine + ";" + ten)));
-                    smsIntent.putExtra("sms_body","Dear Sir,\n" +
-                            "I am Khondoker Shahidul Islam Shakhor, Managing Director, Rapid PR.  I want to meet with you in reference of "+namedata+".\n" +
+                    smsIntent.putExtra("sms_body", "Dear Sir,\n" +
+                            "I am Khondoker Shahidul Islam Shakhor, Managing Director, Rapid PR.  I want to meet with you in reference of " + namedata + ".\n" +
                             "Please give me an appointment.\n" +
                             "Regards.\n" +
                             "Shakhor.\n" +
                             "Cell: 01730012300.\n" +
                             "Mail: info.rapidpr@gmail.com.\n" +
-                            "www.rapidpr-bd.com");startActivity(smsIntent);
+                            "www.rapidpr-bd.com");
+                    startActivity(smsIntent);
 
                     Toast.makeText(ElavenActavity.this, "Your Message is ready to send", Toast.LENGTH_LONG).show();
                     finish();
@@ -88,6 +89,7 @@ public class ElavenActavity extends AppCompatActivity {
             }
         });
     }
+
     private void takePermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             requestPermissions(new String[]{

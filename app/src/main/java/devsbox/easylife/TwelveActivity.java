@@ -12,7 +12,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class TwelveActivity extends AppCompatActivity {
-    EditText ed ,edzero, edone , edtwo , edthree , edfour, edfive , edsix , edseven , edeight;
+    EditText ed, edzero, edone, edtwo, edthree, edfour, edfive, edsix, edseven, edeight;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,9 +49,9 @@ public class TwelveActivity extends AppCompatActivity {
                 String nine = edseven.getText().toString();
                 String ten = edeight.getText().toString();
 
-                if(one.equals("")){
+                if (one.equals("")) {
                     Toast.makeText(TwelveActivity.this, "Please file-up first field", Toast.LENGTH_SHORT).show();
-                }else{
+                } else {
                     /*Intent smsIntent = new Intent(Intent.ACTION_VIEW);
                     smsIntent.setType("vnd.android-dir/mms-sms");
                     smsIntent.putExtra("address", one+";"+two+";"+three+";"+four+";"+five+";"+six+";"+seven+";"+eight+";"+nine+";"+ten);
@@ -61,7 +62,7 @@ public class TwelveActivity extends AppCompatActivity {
 
                     Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
                     smsIntent.setData(Uri.parse("smsto:" + Uri.encode(one + ";" + two + ";" + three + ";" + four + ";" + five + ";" + six + ";" + seven + ";" + eight + ";" + nine + ";" + ten)));
-                    smsIntent.putExtra("sms_body","বিজয় দিবস গ্র্যান্ড র\u200D্যালী-২০১৭ অনলাইন রেজিস্ট্রেশন করতে নিচের লিঙ্ক-এ ক্লিক করুন ।\n" +
+                    smsIntent.putExtra("sms_body", "বিজয় দিবস গ্র্যান্ড র\u200D্যালী-২০১৭ অনলাইন রেজিস্ট্রেশন করতে নিচের লিঙ্ক-এ ক্লিক করুন ।\n" +
                             "https://goo.gl/sU8ay3\n" +
                             "বিস্তারিত জানতেঃ 01730012303, 01730012307");
                     startActivity(smsIntent);

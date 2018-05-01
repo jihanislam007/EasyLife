@@ -15,18 +15,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:weightSum="20">
+            android:weightSum="21.5">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:layout_weight="1"
+                android:layout_weight=".5"
                 android:background="@drawable/top"></LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="3">
+                android:layout_weight="5">
 
                 <CalendarView
                     android:id="@+id/calenderView"
@@ -84,7 +84,6 @@
                         android:id="@+id/ThirdPhonEditText"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_alignParentEnd="true"
                         android:layout_marginTop="15dp"
                         android:background="@drawable/ractangle_dark_border"
                         android:hint="Phone Number(must)"
@@ -111,7 +110,6 @@
                             android:id="@+id/ThirdPhonEditTextzero"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_alignParentEnd="true"
                             android:layout_marginTop="15dp"
                             android:background="@drawable/ractangle_dark_border"
                             android:hint="Phone Number"
@@ -132,7 +130,6 @@
                             android:id="@+id/ThirdPhonEditTextOne"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_alignParentEnd="true"
                             android:layout_marginTop="15dp"
                             android:background="@drawable/ractangle_dark_border"
                             android:hint="Phone Number"
@@ -152,7 +149,6 @@
                             android:id="@+id/ThirdPhonEditTextTwo"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_alignParentEnd="true"
                             android:layout_marginTop="15dp"
                             android:background="@drawable/ractangle_dark_border"
                             android:hint="Phone Number"
@@ -173,7 +169,6 @@
                             android:id="@+id/ThirdPhonEditTextThree"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_alignParentEnd="true"
                             android:layout_marginTop="15dp"
                             android:background="@drawable/ractangle_dark_border"
                             android:hint="Phone Number"
@@ -194,7 +189,6 @@
                             android:id="@+id/ThirdPhonEditTextFour"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_alignParentEnd="true"
                             android:layout_marginTop="15dp"
                             android:background="@drawable/ractangle_dark_border"
                             android:hint="Phone Number"
@@ -214,7 +208,6 @@
                             android:id="@+id/ThirdPhonEditTextFive"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_alignParentEnd="true"
                             android:layout_marginTop="15dp"
                             android:background="@drawable/ractangle_dark_border"
                             android:hint="Phone Number"
@@ -234,7 +227,6 @@
                             android:id="@+id/ThirdPhonEditTextsix"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_alignParentEnd="true"
                             android:layout_marginTop="15dp"
                             android:background="@drawable/ractangle_dark_border"
                             android:hint="Phone Number"
@@ -254,7 +246,6 @@
                             android:id="@+id/ThirdPhonEditTextseven"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_alignParentEnd="true"
                             android:layout_marginTop="15dp"
                             android:background="@drawable/ractangle_dark_border"
                             android:hint="Phone Number"
@@ -274,7 +265,6 @@
                             android:id="@+id/ThirdPhonEditTextEight"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_alignParentEnd="true"
                             android:layout_marginTop="15dp"
                             android:background="@drawable/ractangle_dark_border"
                             android:hint="Phone Number"
@@ -294,8 +284,6 @@
                             android:id="@+id/ThirdSendButton"
                             android:layout_width="match_parent"
                             android:layout_height="70dp"
-                            android:layout_alignParentEnd="true"
-                            android:layout_alignParentStart="true"
                             android:layout_marginLeft="55dp"
                             android:layout_marginRight="55dp"
                             android:background="@drawable/send_button"
@@ -311,7 +299,6 @@
         </LinearLayout>
 
     </ScrollView>
-
 
 
 </LinearLayout>

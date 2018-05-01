@@ -99,7 +99,6 @@
                         </LinearLayout>
 
 
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
@@ -116,7 +115,7 @@
                                 android:background="@drawable/ractangle_dark_border"
                                 android:hint="Phone Number(must)"
                                 android:textAlignment="center"
-                                android:inputType="phone"/>
+                                android:inputType="phone" />
 
                         </LinearLayout>
 
@@ -141,87 +140,87 @@
 
                         </LinearLayout>
 
-                       <!-- <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginRight="15dp">
+                        <!-- <LinearLayout
+                             android:layout_width="match_parent"
+                             android:layout_height="0dp"
+                             android:layout_weight="1"
+                             android:layout_marginLeft="15dp"
+                             android:layout_marginRight="15dp">
 
-                            <EditText
-                                android:id="@+id/SecondPhonEditTextTwo"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_alignParentEnd="true"
-                                android:layout_marginTop="15dp"
-                                android:background="@drawable/ractangle_dark_border"
-                                android:hint="Phone Number"
-                                android:textAlignment="center"
-                                android:inputType="phone"/>
+                             <EditText
+                                 android:id="@+id/SecondPhonEditTextTwo"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="match_parent"
+                                 android:layout_alignParentEnd="true"
+                                 android:layout_marginTop="15dp"
+                                 android:background="@drawable/ractangle_dark_border"
+                                 android:hint="Phone Number"
+                                 android:textAlignment="center"
+                                 android:inputType="phone"/>
 
-                        </LinearLayout>
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginRight="15dp">
-
-                            <EditText
-                                android:id="@+id/SecondPhonEditTextThree"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_alignParentEnd="true"
-                                android:layout_marginTop="15dp"
-                                android:background="@drawable/ractangle_dark_border"
-                                android:hint="Phone Number"
-                                android:textAlignment="center"
-                                android:inputType="phone"/>
-
-                        </LinearLayout>
+                         </LinearLayout>
 
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginRight="15dp">
+                         <LinearLayout
+                             android:layout_width="match_parent"
+                             android:layout_height="0dp"
+                             android:layout_weight="1"
+                             android:layout_marginLeft="15dp"
+                             android:layout_marginRight="15dp">
 
-                            <EditText
-                                android:id="@+id/SecondPhonEditTextFour"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_alignParentEnd="true"
-                                android:layout_marginTop="15dp"
-                                android:background="@drawable/ractangle_dark_border"
-                                android:hint="Phone Number"
-                                android:textAlignment="center"
-                                android:inputType="phone"/>
+                             <EditText
+                                 android:id="@+id/SecondPhonEditTextThree"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="match_parent"
+                                 android:layout_alignParentEnd="true"
+                                 android:layout_marginTop="15dp"
+                                 android:background="@drawable/ractangle_dark_border"
+                                 android:hint="Phone Number"
+                                 android:textAlignment="center"
+                                 android:inputType="phone"/>
 
-                        </LinearLayout>
+                         </LinearLayout>
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginRight="15dp">
 
-                            <EditText
-                                android:id="@+id/SecondPhonEditTextFive"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_alignParentEnd="true"
-                                android:layout_marginTop="15dp"
-                                android:background="@drawable/ractangle_dark_border"
-                                android:hint="Phone Number"
-                                android:textAlignment="center"
-                                android:inputType="phone"/>
+                         <LinearLayout
+                             android:layout_width="match_parent"
+                             android:layout_height="0dp"
+                             android:layout_weight="1"
+                             android:layout_marginLeft="15dp"
+                             android:layout_marginRight="15dp">
 
-                        </LinearLayout>-->
+                             <EditText
+                                 android:id="@+id/SecondPhonEditTextFour"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="match_parent"
+                                 android:layout_alignParentEnd="true"
+                                 android:layout_marginTop="15dp"
+                                 android:background="@drawable/ractangle_dark_border"
+                                 android:hint="Phone Number"
+                                 android:textAlignment="center"
+                                 android:inputType="phone"/>
+
+                         </LinearLayout>
+
+                         <LinearLayout
+                             android:layout_width="match_parent"
+                             android:layout_height="0dp"
+                             android:layout_weight="1"
+                             android:layout_marginLeft="15dp"
+                             android:layout_marginRight="15dp">
+
+                             <EditText
+                                 android:id="@+id/SecondPhonEditTextFive"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="match_parent"
+                                 android:layout_alignParentEnd="true"
+                                 android:layout_marginTop="15dp"
+                                 android:background="@drawable/ractangle_dark_border"
+                                 android:hint="Phone Number"
+                                 android:textAlignment="center"
+                                 android:inputType="phone"/>
+
+                         </LinearLayout>-->
 
                     </LinearLayout>
 
@@ -236,17 +235,17 @@
             android:layout_weight="1.50"
             android:gravity="center">
 
-           <!-- <Button
-                android:id="@+id/SecondSendButton"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginLeft="55dp"
-                android:layout_marginRight="55dp"
-                android:background="@drawable/send_button"
-                android:text="Send SMS"
-                android:textSize="24sp"></Button>-->
+            <!-- <Button
+                 android:id="@+id/SecondSendButton"
+                 android:layout_width="match_parent"
+                 android:layout_height="70dp"
+                 android:layout_alignParentEnd="true"
+                 android:layout_alignParentStart="true"
+                 android:layout_marginLeft="55dp"
+                 android:layout_marginRight="55dp"
+                 android:background="@drawable/send_button"
+                 android:text="Send SMS"
+                 android:textSize="24sp"></Button>-->
 
         </LinearLayout>
 

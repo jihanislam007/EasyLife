@@ -99,7 +99,6 @@
                         </LinearLayout>
 
 
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
@@ -116,7 +115,7 @@
                                 android:background="@drawable/ractangle_dark_border"
                                 android:hint="Phone Number(must)"
                                 android:textAlignment="center"
-                                android:inputType="phone"/>
+                                android:inputType="phone" />
 
                         </LinearLayout>
 

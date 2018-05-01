@@ -14,8 +14,8 @@ import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity {
 
-    CheckBox mr , mrs;
-    EditText name , phone , ph_two , ph_three ,ph_four , ph_five ;
+    CheckBox mr, mrs;
+    EditText name, phone, ph_two, ph_three, ph_four, ph_five;
     Button send;
 
     @Override
@@ -39,8 +39,6 @@ public class SecondActivity extends AppCompatActivity {
         send = (Button) findViewById(R.id.SecondSendButton);
 
 
-
-
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,12 +58,11 @@ public class SecondActivity extends AppCompatActivity {
                 Toast.makeText(SecondActivity.this,phonedata+phNotwo+phNothree+phNofour+phNofive , Toast.LENGTH_LONG).show();
                */ //////////////////////for CheckBox///////////////////////
 
-              StringBuilder output = new StringBuilder();
+                StringBuilder output = new StringBuilder();
 
                 if (mr.isChecked()) {
                     output.append("Mr. ");
-                }
-                else if (mrs.isChecked()) {
+                } else if (mrs.isChecked()) {
                     output.append("Mrs. ");
                 }
 
@@ -81,12 +78,12 @@ public class SecondActivity extends AppCompatActivity {
                     startActivity(smsIntent);*/
 
                     Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
-                    smsIntent.setData(Uri.parse("smsto:" + Uri.encode( phonedata)));
-                    smsIntent.putExtra("sms_body",output.toString()+ namedata + "," + " Rapid PR is first Digital Media archive & Event Management firm in Bangladesh. To increase your business promotion, any event or any media support please feel free to contact with us. " +
+                    smsIntent.setData(Uri.parse("smsto:" + Uri.encode(phonedata)));
+                    smsIntent.putExtra("sms_body", output.toString() + namedata + "," + " Rapid PR is first Digital Media archive & Event Management firm in Bangladesh. To increase your business promotion, any event or any media support please feel free to contact with us. " +
                             "\nRegards. Shahidul Islam Shakhor. \n01730012300, \ninfo.rapidpr@gmail.com, \nwww.rapidpr-bd.com");
                     startActivity(smsIntent);
 
-                               Toast.makeText(SecondActivity.this, "Your Message is ready to send", Toast.LENGTH_LONG).show();
+                    Toast.makeText(SecondActivity.this, "Your Message is ready to send", Toast.LENGTH_LONG).show();
                     finish();
                 }
             }

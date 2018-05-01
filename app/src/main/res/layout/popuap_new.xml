@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/ractangler_white" >
+    android:background="@drawable/ractangler_white">
 
     <TextView
         android:id="@+id/dialogtitle"
@@ -85,6 +85,7 @@
 
         </LinearLayout>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -109,7 +110,7 @@
             android:text="SMS"
             android:textColor="@android:color/background_light"
             android:textSize="24sp"
-            android:gravity="center"/>
+            android:gravity="center" />
 
     </LinearLayout>
 

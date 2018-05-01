@@ -14,8 +14,8 @@ import android.widget.Toast;
 
 public class EightActivity extends AppCompatActivity {
 
-    CheckBox mr , mrs;
-    EditText name , phone ;
+    CheckBox mr, mrs;
+    EditText name, phone;
     Button send;
 
     @Override
@@ -31,8 +31,6 @@ public class EightActivity extends AppCompatActivity {
         phone = (EditText) findViewById(R.id.SecondPhonEditTextOne);
 
         send = (Button) findViewById(R.id.SecondSendButton);
-
-
 
 
         send.setOnClickListener(new View.OnClickListener() {
@@ -58,8 +56,7 @@ public class EightActivity extends AppCompatActivity {
 
                 if (mr.isChecked()) {
                     output.append("Mr. ");
-                }
-                else if (mrs.isChecked()) {
+                } else if (mrs.isChecked()) {
                     output.append("Mrs. ");
                 }
 
@@ -76,7 +73,7 @@ public class EightActivity extends AppCompatActivity {
 
                     Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
                     smsIntent.putExtra("address", phonedata);
-                    smsIntent.putExtra("sms_body",output.toString()+ namedata + "," + " আপনার যে কোন ইভেন্ট আয়োজন ও টিভিতে সংবাদ প্রচারের জন্য যোগাযোগ করুন।\n" +
+                    smsIntent.putExtra("sms_body", output.toString() + namedata + "," + " আপনার যে কোন ইভেন্ট আয়োজন ও টিভিতে সংবাদ প্রচারের জন্য যোগাযোগ করুন।\n" +
                             " র\u200D্যাপিড পিআর:01730012307, 01730012303 \n info.rapidpr@gmail.com");
                     startActivity(smsIntent);
 
@@ -86,6 +83,7 @@ public class EightActivity extends AppCompatActivity {
             }
         });
     }
+
     private void takePermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             requestPermissions(new String[]{

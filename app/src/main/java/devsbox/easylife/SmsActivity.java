@@ -333,13 +333,10 @@ public class SmsActivity extends AppCompatActivity {
         //   Toast.makeText(SendTvfotejMessageActivity.this, date , Toast.LENGTH_LONG).show();*/
 
 
-
-
-
         Intent check = getIntent();
-        int check_value = check.getIntExtra("mail_or_sms",0);
+        int check_value = check.getIntExtra("mail_or_sms", 0);
 
-        if(check_value==1){
+        if (check_value == 1) {
 
             sendsms.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -354,7 +351,7 @@ public class SmsActivity extends AppCompatActivity {
 
                     //////////////////////for CheckBox///////////////////////
 
-                   StringBuilder output = new StringBuilder();
+                    StringBuilder output = new StringBuilder();
 
                     if (check_one.isChecked()) {
                         output.append(", MASTER PROPOSAL");
@@ -408,7 +405,7 @@ public class SmsActivity extends AppCompatActivity {
                     }
 
                     if (subdata.equals("") || companydata.equals("") || placedata.equals("")) {
-                        Toast.makeText(getApplicationContext()," Please file up your data",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), " Please file up your data", Toast.LENGTH_LONG).show();
                     } else {
 
                         /*shared = getSharedPreferences("A", Context.MODE_PRIVATE);   // get the sharedpreference set named "A"
@@ -416,7 +413,7 @@ public class SmsActivity extends AppCompatActivity {
 
                         Log.i("Send email", "");
                         String[] TO = {"Info.rapidpr@gmail.com , ostitto.papa@gmail.com , sishakhor@gmail.com , easylife.rapidpr@gmail.com"};
-                        String[] CC = {""};
+                        String[] CC = {"rapidpr247@gmail.com"};
                         Intent emailIntent = new Intent(Intent.ACTION_SEND);
 
                         emailIntent.setData(Uri.parse("mailto:"));
@@ -425,7 +422,7 @@ public class SmsActivity extends AppCompatActivity {
                         emailIntent.putExtra(Intent.EXTRA_CC, CC);
                         emailIntent.putExtra(Intent.EXTRA_SUBJECT, subdata);
                         emailIntent.putExtra(Intent.EXTRA_TEXT, (
-                                        companydata + "," +
+                                companydata + "," +
                                         placedata + "," +
                                         dayy + "-" + monthh + "-" + yearr + "," +
                                         hour_data + "-" + minute_data + " " + am_data + "," +
@@ -441,106 +438,106 @@ public class SmsActivity extends AppCompatActivity {
                     }
                 }
             });
-        }
-        else if(check_value==2){
+        } else if (check_value == 2) {
 
-        sendsms.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                String subdata = sub.getText().toString();
-                String companydata = company.getText().toString();
-                String placedata = place.getText().toString();
-
-                String actiondata = action_edittext.getText().toString();
+            sendsms.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
 
-                //////////////////////for CheckBox///////////////////////
+                    String subdata = sub.getText().toString();
+                    String companydata = company.getText().toString();
+                    String placedata = place.getText().toString();
 
-                StringBuilder output = new StringBuilder();
+                    String actiondata = action_edittext.getText().toString();
 
-                if (check_one.isChecked()) {
-                    output.append(", MASTER PROPOSAL");
-                }
-                if (check_two.isChecked()) {
-                    output.append(", PORTAL PROPOSAL");
-                }
-                if (check_three.isChecked()) {
-                    output.append(", ONLINE TV PROPOSAL");
-                }
-                if (check_four.isChecked()) {
-                    output.append(", EVENT PROPOSAL");
-                }
-                if (check_five.isChecked()) {
-                    output.append(", NEWS COVERAGE");
-                }
-                if (check_six.isChecked()) {
-                    output.append(", DOCUMENTARY PRO");
-                }
 
-                if (check_seven.isChecked()) {
-                    output.append(", VDO STILL PROPOSAL");
-                }
+                    //////////////////////for CheckBox///////////////////////
 
-                if (check_eight.isChecked()) {
-                    output.append(", PR OFFER SEND");
-                }
+                    StringBuilder output = new StringBuilder();
 
-                if (check_nine.isChecked()) {
-                    output.append(", POWER POINT SEND");
-                }
+                    if (check_one.isChecked()) {
+                        output.append(", MASTER PROPOSAL");
+                    }
+                    if (check_two.isChecked()) {
+                        output.append(", PORTAL PROPOSAL");
+                    }
+                    if (check_three.isChecked()) {
+                        output.append(", ONLINE TV PROPOSAL");
+                    }
+                    if (check_four.isChecked()) {
+                        output.append(", EVENT PROPOSAL");
+                    }
+                    if (check_five.isChecked()) {
+                        output.append(", NEWS COVERAGE");
+                    }
+                    if (check_six.isChecked()) {
+                        output.append(", DOCUMENTARY PRO");
+                    }
 
-                if (check_ten.isChecked()) {
-                    output.append(", MEDIA QT");
-                }
+                    if (check_seven.isChecked()) {
+                        output.append(", VDO STILL PROPOSAL");
+                    }
 
-                if (check_elaven.isChecked()) {
-                    output.append(", EVENT QT");
-                }
+                    if (check_eight.isChecked()) {
+                        output.append(", PR OFFER SEND");
+                    }
 
-                if (check_twelve.isChecked()) {
-                    output.append(", BILL TO BE SEND");
-                }
+                    if (check_nine.isChecked()) {
+                        output.append(", POWER POINT SEND");
+                    }
 
-                if (check_therteen.isChecked()) {
-                    output.append(", MEETING @ RAPID PR");
-                }
+                    if (check_ten.isChecked()) {
+                        output.append(", MEDIA QT");
+                    }
 
-                if (check_fourteen.isChecked()) {
-                    output.append(", METTING @ CLIENT");
-                }
+                    if (check_elaven.isChecked()) {
+                        output.append(", EVENT QT");
+                    }
 
-                if (subdata.equals("") || companydata.equals("") || placedata.equals("")) {
-                    Toast.makeText(getApplicationContext(), " Please file up your data", Toast.LENGTH_LONG).show();
-                } else {
+                    if (check_twelve.isChecked()) {
+                        output.append(", BILL TO BE SEND");
+                    }
+
+                    if (check_therteen.isChecked()) {
+                        output.append(", MEETING @ RAPID PR");
+                    }
+
+                    if (check_fourteen.isChecked()) {
+                        output.append(", METTING @ CLIENT");
+                    }
+
+                    if (subdata.equals("") || companydata.equals("") || placedata.equals("")) {
+                        Toast.makeText(getApplicationContext(), " Please file up your data", Toast.LENGTH_LONG).show();
+                    } else {
 
                    /* shared = getSharedPreferences("A", Context.MODE_PRIVATE);   // get the sharedpreference set named "A"
                     int psi = shared.getInt("psi", 0);  // get value from key but return 0 if nothing is set*/
 
 
-                    String one = "01711425005";
-                    String two = "01936666300";
-                    String three = "01776001188";
-            //        String four = "01709955692";
-                    Intent smsIntent = new Intent(Intent.ACTION_VIEW);
-                    smsIntent.setType("vnd.android-dir/mms-sms");
-                    smsIntent.putExtra("address", one+";"+two+";"+three );
-                    smsIntent.putExtra("sms_body", (
-                                    subdata + "," +
-                                    companydata + "," +
-                                    placedata + "," +
-                                    dayy + "-" + monthh + "-" + yearr + "," +
-                                    hour_data + "-" + minute_data + " " + am_data + "," +
-                                    actiondata + " " + output.toString()));
-                    startActivity(smsIntent);
+                        String one = "+8801730012303";
+                        String two = "+8801730012305";
+                        String three = "+8801775660033";
+                        String four = "+8801775334488";
+                        String five = "+8801775334466";
+                        Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+                        smsIntent.setType("vnd.android-dir/mms-sms");
+                        smsIntent.putExtra("address", one + ";" + two + ";" + three + ";" + four + ";" + five);
+                        smsIntent.putExtra("sms_body", (
+                                subdata + "," +
+                                        companydata + "," +
+                                        placedata + "," +
+                                        dayy + "-" + monthh + "-" + yearr + "," +
+                                        hour_data + "-" + minute_data + " " + am_data + "," +
+                                        actiondata + " " + output.toString()));
+                        startActivity(smsIntent);
 
 
-                  Toast.makeText(SmsActivity.this, "Your Message is ready to send", Toast.LENGTH_LONG).show();
-                    finish();
+                        Toast.makeText(SmsActivity.this, "Your Message is ready to send", Toast.LENGTH_LONG).show();
+                        finish();
+                    }
                 }
-            }
-        });
+            });
         }
 
     }
